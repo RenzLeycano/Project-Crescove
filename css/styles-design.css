@@ -10,12 +10,19 @@
     --neutral4: #9E9E9E;
 }
 
+/* Header Styles */
 header {
     height: 80px;
     background-color: var(--main-color4);
     position: absolute;
+    align-items: center;
 }
 header a img {
     height: 65.84px;
     width: 117.1px
+}
+#nav-bar li{
+    display: inline;
+    width: auto;
+    max-width: 137px;
 }
