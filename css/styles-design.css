@@ -37,7 +37,7 @@ header a img {
 footer {
     height: 403px;
     background-color: var(--main-color4);
-    padding: 3em;
+    padding: 3em 7em;
 }
 #footer-details {
     display: grid;
