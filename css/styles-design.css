@@ -42,3 +42,26 @@ footer {
     column-gap: 2em;
     padding: 3em;
 }
+
+#footer-logo {
+    height: 126.5px;
+    width: 225px;
+}
+
+.footer-htext {
+    color: var(--accent-color);
+}
+
+#resources {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+/* List Styles */
+.list-sidelines {
+    width: 6px;
+    height: 100%;
+    padding-right: 1em;
+    background-color: var(--accent-color);
+}
