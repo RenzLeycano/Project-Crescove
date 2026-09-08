@@ -56,7 +56,7 @@ footer {
 #footer-site, #footer-resources, #footer-get-to-know {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    vertical-align: middle;
 }
 
 #footer-logo {
