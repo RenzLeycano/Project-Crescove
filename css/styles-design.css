@@ -53,7 +53,10 @@ footer {
     justify-content: space-between;
 }
 
-#footer
+#footer-site, #footer-resources, #footer-get-to-know {
+    display: flex;
+    flex-direction: column;
+}
 
 #footer-logo {
     height: 126.5px;
