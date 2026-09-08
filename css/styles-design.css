@@ -35,12 +35,14 @@ header a img {
 
 /* Footer Styles */
 footer {
-    display: grid;
     height: 403px;
     background-color: var(--main-color4);
-    grid-template-columns: repeat(3fr);
-    column-gap: 2em;
     padding: 3em;
+}
+#footer-details {
+    display: grid;
+    column-gap: 2em;
+    grid-template-columns: repeat(3fr);    
 }
 
 #footer-logo {
