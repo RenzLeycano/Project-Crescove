@@ -6,6 +6,10 @@
 a {
     text-decoration: none;
 }
+a:visited, a:active {
+    color: inherit;
+}
+
 ul {
     list-style-type: none;
 }

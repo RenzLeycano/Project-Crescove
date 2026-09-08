@@ -29,4 +29,7 @@ header a img {
 #nav-bar li{
     display: inline;
     padding: 0 2em;
+    color: var(--neutral1);
+    font-weight: bold;
 }
+
