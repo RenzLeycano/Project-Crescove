@@ -19,7 +19,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1em;
+    padding: 0 1em 0 2em;
 }
 
 header a img {
@@ -37,7 +37,7 @@ header a img {
 footer {
     height: 403px;
     background-color: var(--main-color4);
-    padding: 3em 7em;
+    padding: 3em 8em;
 }
 #footer-site img {
     width: 225px;
@@ -51,6 +51,7 @@ footer {
     color: var(--neutral1);
     align-items: center;   
     justify-content: space-between;
+    vertical-align: center;
 }
 
 #footer-site, #footer-resources, #footer-get-to-know {
