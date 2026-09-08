@@ -41,6 +41,7 @@ footer {
 }
 #footer-details {
     display: grid;
+    width: 100%;
     column-gap: 2em;
     grid-template-columns: repeat(3fr);
     color: var(--neutral1)   
