@@ -47,40 +47,44 @@
       </nav>
     </header>
 
-    <main id="">
+    <main id="Welcome-grid">
       <section class="left-side mobile">
-        <img src="Img/Crescove-Black-Logo.png" alt="Crescove logo">
-        <p>
+        <img src="Img/Crescove-Black-Logo.png" alt="Crescove logo" id="Welcome-logo">
+        <p class="subtext">
           Value yourself! Want to learn more about your emotions and how you feel? Give it a shot, you don't have to be afraid, this is your safe space!
         </p>
         <form action="">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" required>
+          <input type="email" name="email" id="email" class="field-input" placeholder="Enter name">
 
           <label for="password">Password</label>
-          <input type="text" name="password" id="password" required>
-
-          <input type="submit" value="Log in" class="submit-button1">
-          <input type="submit" value="Sign up" class="submit-button2">
+          <input type="text" name="password" id="password" class="field-input" placeholder="Enter password" required>
+          <div class="submit-container">
+            <input type="submit" value="Log in" class="submit-button1">
+            <input type="submit" value="Sign up" class="submit-button2">
+          </div>
         </form>
-        <p>or with...</p>
-
         <div id="other-logins">
-          <div class="login-icons">
-            <img src="Icons/Google.svg" alt="Google Icon">
+          <p>or with...</p>
+          <div>
+            <div class="login-icons">
+              <img src="Icons/Google.svg" alt="Google Icon">
+            </div>
+            <div class="login-icons">
+              <img src="Icons/Facebook login.svg" alt="Google Icon">
+            </div>
+            <div class="login-icons">
+              <img src="Icons/Apple login.svg" alt="Google Icon">
+            </div>
           </div>
-          <div class="login-icons">
-            <img src="Icons/Facebook login.svg" alt="Google Icon">
-          </div>
-          <div class="login-icons">
-            <img src="Icons/Apple login.svg" alt="Google Icon">
-          </div>
+          <a href="Crescove-Home.html" id="no-account">Continue without an account</a>
         </div>
         
-        <a href="Crescove-Home.html">Continue without an account</a>
+        
       </section>
+
       <section class="right-side tablet-desktop">
-      
+        
       </section>
     </main>
 
