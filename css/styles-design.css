@@ -47,6 +47,10 @@ footer {
     color: var(--neutral1)   
 }
 
+#footer-details *{
+    display: flex;
+}
+
 #footer-logo {
     height: 126.5px;
     width: 225px;
