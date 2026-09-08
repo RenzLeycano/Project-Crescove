@@ -85,6 +85,7 @@ footer {
     height: 35px;
     border-radius: 100%;
     align-items: center;
+    justify-content: center;
     vertical-align: middle;
 }
 
