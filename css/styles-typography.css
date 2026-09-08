@@ -1,7 +1,9 @@
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
 }
-
+h4 {
+    margin-bottom: 1em;
+}
 .script {
     font-family: 'Pacifico', serif;
 }
