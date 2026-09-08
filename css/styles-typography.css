@@ -8,4 +8,5 @@ h1, h2, h3, h4 {
 
 a, p, li{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 200%;
 }

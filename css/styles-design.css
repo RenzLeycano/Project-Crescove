@@ -33,3 +33,12 @@ header a img {
     font-weight: bold;
 }
 
+/* Footer Styles */
+footer {
+    display: grid;
+    height: 403px;
+    background-color: var(--main-color4);
+    grid-template-columns: repeat(3fr);
+    column-gap: 2em;
+    padding: 3em;
+}
