@@ -15,3 +15,7 @@ header {
     background-color: var(--main-color4);
     position: absolute;
 }
+header a img {
+    height: 65.84px;
+    width: 117.1px
+}
