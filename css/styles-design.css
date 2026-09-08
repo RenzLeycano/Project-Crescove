@@ -67,7 +67,7 @@ footer {
 .list-sidelines {
     width: 6px;
     height: 93.5px;
-    padding-right: 1em;
+    padding-right: 0.1em;
     background-color: var(--accent-color);
     border-radius: 100%;
 }
