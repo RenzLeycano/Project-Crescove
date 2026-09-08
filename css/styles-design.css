@@ -39,6 +39,10 @@ footer {
     background-color: var(--main-color4);
     padding: 3em 7em;
 }
+#footer-site img {
+    width: 225px;
+    height: 126.5px;
+}
 #footer-details {
     display: grid;
     width: 100%;
@@ -49,6 +53,7 @@ footer {
     justify-content: space-between;
 }
 
+#footer
 
 #footer-logo {
     height: 126.5px;
