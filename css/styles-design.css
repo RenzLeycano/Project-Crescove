@@ -86,6 +86,9 @@ footer {
     border-radius: 100%;
     align-items: center;
     justify-content: center;
+}
+
+.footer-icon-bg img {
     vertical-align: middle;
 }
 
