@@ -78,7 +78,7 @@ footer {
 }
 
 .footer-icon-bg {
-    display: flex;
+    display: inline-flex;
     margin-left: 0.5em;
     background-color: var(--accent-color);
     width: 35px;
