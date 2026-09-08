@@ -47,7 +47,7 @@ footer {
     color: var(--neutral1)   
 }
 
-#footer-details *{
+#footer-site, #footer-resources, #footer-get-to-know {
     display: flex;
 }
 
