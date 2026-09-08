@@ -10,6 +10,7 @@ main {
 header {
     height: 80px;
     width: 100%;
+    z-index: 20;
     background-color: var(--main-color4);
     position: sticky;
     display: flex;
@@ -164,7 +165,7 @@ input[type="submit"] {
 
 .right-side {
     background-color: var(--bg-accent);
-    padding: 0 5em 0 5em;
+    padding: 5em;
 }
 
 #other-logins, #other-logins div {
@@ -190,4 +191,101 @@ input[type="submit"] {
     display: block;
     margin: 1em;
     color: var(--main-color3);
+}
+
+.portrait {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px var(--shadow);
+    margin: 0.25em;
+}
+
+#small-portrait {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.25em;
+}
+
+.decor-text{
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif sans-serif;
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: 900;
+    line-height: normal;
+    color: var(--neutral1);
+    text-shadow: 0 4px 4px var(--shadow);
+}
+.decor-text.phrase1 {
+    font-size: 5em;
+}
+.decor-text.phrase2 {
+    color: var(--accent-color);
+    font-size: 6em;
+    bottom: 1%;
+}
+.decor-text::after {
+    z-index: 3;
+    position: absolute;
+    inset: 0;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: var(--neutral1);
+    text-shadow: none;
+}
+
+#true .decor-text.phrase1::after {
+    content: "BE TRUE TO";
+}
+
+#true .decor-text.phrase2::after {
+    -webkit-text-stroke-color: var(--accent-color);
+    content: "YOURSELF";
+}
+
+#you .decor-text::after {
+    content: "HOW'RE\aYOU?";
+}
+
+#loved .decor-text::after {
+    content: "YOU'RE\aLOVED";
+}
+
+#true {
+    width: 100%;
+    height: 413px;
+    background-color: var(--main-color3);
+}
+
+#you, #loved {
+    width: 100%;
+    height: 324px;
+}
+
+#you {
+    background-color: var(--main-color1);
+}
+
+#loved {
+    background-color: var(--accent-color);
+}
+
+#true img {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+#you img, #loved img{
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    z-index: 2;
 }
