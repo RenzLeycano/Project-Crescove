@@ -73,6 +73,14 @@ footer {
     grid-template-columns: 20px auto;
 }
 
+.footer-icon-bg {
+    display: inline;
+    margin-left: 0.5em;
+    background-color: var(--accent-color);
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
 
 /* List Styles */
 .list-sideline {
