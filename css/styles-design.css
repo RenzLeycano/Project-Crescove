@@ -16,11 +16,11 @@ header {
     width: auto;
     background-color: var(--main-color4);
     position: absolute;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
-header * {
-    display: inline;
-}
+
 header a img {
     height: 65.84px;
     width: 117.1px
