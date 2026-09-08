@@ -9,3 +9,9 @@
     --neutral3: #4F4F4F;
     --neutral4: #9E9E9E;
 }
+
+header {
+    height: 80px;
+    background-color: var(--main-color4);
+    position: absolute;
+}
