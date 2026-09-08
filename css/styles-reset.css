@@ -7,7 +7,7 @@ a {
     text-decoration: none;
 }
 a:visited, a:active {
-    color: inherit;
+    color: white;
 }
 
 ul {
