@@ -20,3 +20,11 @@ a, p, li{
     color: var(--neutral3);
     padding-bottom: 1em;
 }
+
+.italicize {
+    font-style: italic;
+}
+
+.strong {
+    font-weight: bold;
+}
