@@ -204,6 +204,13 @@ input[type="submit"], .button1, .button2 {
     height: 48%;
 }
 
+.decor-image {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    z-index: 2;
+}
+
 .decor-text{
     position: absolute;
     font-family: Verdana, Geneva, Tahoma, sans-serif sans-serif;
@@ -245,7 +252,7 @@ input[type="submit"], .button1, .button2 {
 }
 
 /* Explore Backgrounds & Pseudoclasses */
-.explore-background {
+.explore-background, #about-portrait, #quote {
     border-radius: 30px;
     position: relative;
     display: flex;
@@ -366,21 +373,13 @@ input[type="submit"], .button1, .button2 {
 }
 
 #true img {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     height: 100%;
     object-fit: scale-down;
-    z-index: 2;
 }
 
 #you img, #loved img{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     height: 85%;
     object-fit: cover;
-    z-index: 2;
 }
 
 /* ====================================================================== */
@@ -405,7 +404,7 @@ input[type="submit"], .button1, .button2 {
 #home {
     position: relative;
 }
-#home > .decor-image {
+#home > .background-image {
     position: absolute;
     top: 0;
     left: 7em;
@@ -484,7 +483,6 @@ input[type="submit"], .button1, .button2 {
 #activity > img {
     position: absolute;
     height: 90%;
-    width: auto;
     right: 0;
     bottom: -0.6%;
     object-fit: cover;
@@ -497,12 +495,9 @@ input[type="submit"], .button1, .button2 {
     background-color: var(--main-color3);
 }
  
-#topic-shortcut > img {
-    position: absolute;
-    width: auto;
+#topic-shortcut > .decor-image {
     height: 100%;
     left: -12%;
-    z-index: 2;
 }
 
 #topic-shortcut > .decor-text {
@@ -554,8 +549,118 @@ input[type="submit"], .button1, .button2 {
 
 /* ====================================================================== */
 /* About Page styles */
+#about > .wrapper {
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: top;
+    justify-content: center;
+    height: 580px;
+}
 
 #about #intro-message {
-    left: 46%;
+    position: relative;
     text-align: center;
+    margin: 3em 0;
 }
+
+#about-portrait {
+    position: relative;
+    background-color: var(--main-color3);
+    padding-top: 5em;
+    max-width: 486px;
+    height: 550px;
+    margin: 5em;
+    align-items: center;
+    z-index: -2;
+}
+
+#about-portrait > .decor-image {
+    height: 100%;
+}
+
+#about-portrait .decor-text {
+    bottom: 5%;
+    width: 100%;
+    font-size: 7.5em;
+    line-height: 80%;
+}
+
+#about-portrait .decor-text::after {
+    content: "ABOUT\AME";
+}
+
+#about > .more-to-explore {
+    position: relative;
+    z-index: -3;
+    padding-top: 7em;
+}
+
+/* Blockquote */
+#quote {
+    float: right;
+    display: flex;
+    width: 345px;
+    height: 358px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7em;
+    padding: 1.25em;
+    background-color: var(--main-color1);
+    margin-left: 4em;
+}
+
+#site-mission {
+    padding: 1em 3em 3em 2em;
+}
+
+@keyframes pulse {
+    10% {
+        transform: scale(1.0);
+    }
+    20% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    90% {
+        transform: scale(0.9);
+    }
+}
+.decor-circle {
+    position: absolute;
+    background-color: var(--accent-color);
+    border-radius: 100%;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.c1about {
+    bottom: 2%;
+    left: 2%;
+    width: 326px;
+    height: 326px;
+    opacity: 0.7;
+    animation: 3s linear infinite pulse;
+}
+
+.c2about {
+    bottom: 25%;
+    right: 2%;
+    width: 270px;
+    height: 270px;
+    opacity: 0.9;
+    animation: 5s linear infinite pulse;
+}
+
+.c3about {
+    bottom: 60%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+    opacity: 0.4;
+    animation: 7s linear infinite pulse;
+}
+
