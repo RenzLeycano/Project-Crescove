@@ -26,11 +26,36 @@ header a img {
     width: 117.1px;
     vertical-align: middle;
 }
+
+/* Navbar Styles */
 #nav-bar li{
-    display: inline;
+    display: inline-flex;
     padding: 0 2em;
     color: var(--neutral1);
     font-weight: bold;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-highlight {
+    color: var(--accent-color);
+}
+
+#nav-highlight::before, #nav-highlight::after {
+    content: "|";
+    position: absolute;
+    font-weight: bold;
+    color: var(--accent-color);
+    opacity: 0.5;
+}
+
+#nav-highlight::before {
+    right: 80%;
+}
+
+#nav-highlight::after {
+    left: 80%;
 }
 
 /* Footer Styles */
@@ -396,15 +421,14 @@ input[type="submit"], .button1, .button2 {
     top: 0;
     padding: 3em;
     background-color: white;
-    width: 100%;
+    width: 50%;
     z-index: -2;
 }
 
-#intro-message > h1, #intro-message > p {
+#home #intro-message > h1, #home #intro-message > p {
     position: relative;
     height: auto;
-    left: 35%;
-    width: 50%;
+    left: 75%;
     font-weight: normal;
 }
 
@@ -450,17 +474,6 @@ input[type="submit"], .button1, .button2 {
 
 #activity > .explore-content {
     background-color: var(--main-color1);
-}
-
-#activity > .explore-content > .title {
-    font-size: 2.5em;
-    padding: 0.25em;
-}
-
-#activity > .explore-content > .subtitle {
-    font-size: 2em;
-    font-weight: normal;
-    padding: 0em;
 }
 
 #activity > .explore-content > .explore-info {
@@ -537,4 +550,12 @@ input[type="submit"], .button1, .button2 {
 
 #about-shortcut > .decor-text::after {
     content: "ABOUT";
+}
+
+/* ====================================================================== */
+/* About Page styles */
+
+#about #intro-message {
+    left: 46%;
+    text-align: center;
 }
