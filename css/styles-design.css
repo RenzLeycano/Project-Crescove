@@ -718,33 +718,90 @@ input[type="submit"], .button1, .button2 {
     object-fit: cover;
 }
 #spec-topics-shortcuts > .explore-background {
-    height: 500px;
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
 }
+
 #spec-topics-shortcuts > .explore-background > .explore-content {
     position: relative;
-    height: 80%;
+    top: 0;
+    height: 100%;
+    max-height: 300px;
     width: auto;
     object-fit: cover;
 }
 
-.topic-image {
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
+#spec-topics-shortcuts > .explore-background > .explore-info p{
+    line-height: normal;
+    color: var(--neutral3)
 }
 
-#spec-topics-shortcuts > .explore-background > .explore-content:nth-child(3n + 1) {
+.topic-image {
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 10%;
+    object-fit: cover;
+}
+/* Alternating background color */
+#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 1) > .explore-content {
     background-color: var(--main-color3);
 }
 
-#spec-topics-shortcuts > .explore-background > .explore-content:nth-child(3n + 2) {
+#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 2) > .explore-content,
+#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 4) > .explore-content {
     background-color: var(--main-color2);
 }
 
-#spec-topics-shortcuts > .explore-background > .explore-content:nth-child(3n) {
+#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 3) > .explore-content,
+#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 5) > .explore-content {
     background-color: var(--main-color1);
 }
-/* Topic - Anger */
+
+/* Decor text */
+#spec-topics-shortcuts > .explore-background > .explore-content > .decor-text {
+    bottom: 1%;
+    font-size: 2.5em;
+}
+
+#spec-topics-shortcuts > .explore-background:nth-of-type(2n + 1) > .explore-content > .decor-text {
+    color: var(--neutral1);
+}
+
+#spec-topics-shortcuts > .explore-background:nth-of-type(2n) > .explore-content > .decor-text {
+    color: var(--accent-color);
+}
+
+#spec-topics-shortcuts > .explore-background:nth-of-type(2n + 1) > .explore-content > .decor-text::after {
+    -webkit-text-stroke-color: var(--neutral1);
+}
+
+#spec-topics-shortcuts > .explore-background:nth-of-type(2n) > .explore-content > .decor-text::after {
+    -webkit-text-stroke-color: var(--accent-color);
+}
+
+/* Specific Topics */
+#anger > .explore-content > .decor-text::after {
+    content: "ANGER";
+}
+
+#depression > .explore-content > .decor-text::after {
+    content: "DEPRESSION";
+}
+
+#letgo > .explore-content > .decor-text::after {
+    content: "LETTING GO";
+}
+
+#overthinking > .explore-content > .decor-text::after {
+    content: "OVERTHINKING";
+}
+
+#pressure > .explore-content > .decor-text::after {
+    content: "PRESSURE";
+}
+
+#stress > .explore-content > .decor-text::after {
+    content: "STRESS";
+}
