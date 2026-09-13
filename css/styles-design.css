@@ -125,6 +125,7 @@ footer {
 .crescove-list {
     display: grid;
     grid-template-columns: 20px auto;
+    text-align: left;
 }
 .list li a {
     transition: color 0.1 ease-in-out 0ms;
@@ -192,9 +193,11 @@ input[type="submit"], .button1, .button2 {
     position: relative;
     justify-content: center;
     display: flex;
+    background-color: var(--neutral1);
     border-radius: 5px;
     box-shadow: 0 4px 4px var(--shadow);
     margin: 0.25em;
+    text-align: center;
 }
 
 #small-portrait {
@@ -467,7 +470,6 @@ input[type="submit"], .button1, .button2 {
 
 /* Activity */
 .explore-background#activity {
-    background-color: var(--neutral1);
     margin-bottom: 2em;
 }
 
@@ -478,6 +480,7 @@ input[type="submit"], .button1, .button2 {
 #activity > .explore-content > .explore-info {
     max-width: 60%;
     padding: 0.25em 0 2em;
+    text-align: center;
 }
 
 #activity > img {
@@ -664,3 +667,84 @@ input[type="submit"], .button1, .button2 {
     animation: 7s linear infinite pulse;
 }
 
+/* ====================================================================== */
+/* Topics Page styles */
+.hero-image.topic {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.hero-image.topic .decor-text {
+    color: var(--accent-color);
+    font-size: 7em;
+    top: 15%;
+    left: 37%;
+    right: 37%;
+}
+
+.hero-image.topic .decor-text::after {
+    content: "TOPICS";
+    -webkit-text-stroke-color: var(--accent-color);
+}
+
+.hero-image.topic .hero-info {
+    position: absolute;
+    color: var(--main-color2);
+    font-size: 1.25em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    inset: 90% 34.5% 10%;
+}
+
+/* Topic - Emotional Health */
+#emotional-health {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+    width: max-content;
+    background-color: var(--main-color1);
+    margin: 5em;
+    width: auto;
+}
+
+#emotional-health img {
+    position: relative;
+    width: 70%;
+    left: 80%;
+    object-fit: cover;
+}
+#spec-topics-shortcuts > .explore-background {
+    height: 500px;
+}
+#spec-topics-shortcuts > .explore-background > .explore-content {
+    position: relative;
+    height: 80%;
+    width: auto;
+    object-fit: cover;
+}
+
+.topic-image {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+#spec-topics-shortcuts > .explore-background > .explore-content:nth-child(3n + 1) {
+    background-color: var(--main-color3);
+}
+
+#spec-topics-shortcuts > .explore-background > .explore-content:nth-child(3n + 2) {
+    background-color: var(--main-color2);
+}
+
+#spec-topics-shortcuts > .explore-background > .explore-content:nth-child(3n) {
+    background-color: var(--main-color1);
+}
+/* Topic - Anger */
