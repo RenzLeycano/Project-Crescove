@@ -233,6 +233,7 @@ input[type="submit"], .button1, .button2 {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: var(--neutral1);
     text-shadow: none;
+    filter: drop-shadow(0 0 6px var(--shadow));
 }
 
 /* Hero Image Styles */
@@ -252,6 +253,7 @@ input[type="submit"], .button1, .button2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2em;
+    row-gap: 2em;
 }
 
 /* Explore Backgrounds & Pseudoclasses */
@@ -697,7 +699,7 @@ input[type="submit"], .button1, .button2 {
     font-style: italic;
     font-weight: bold;
     text-align: center;
-    inset: 90% 34.5% 10%;
+    inset: 85% 34.5% 15%;
 }
 
 /* Topic - Emotional Health */
@@ -729,21 +731,32 @@ input[type="submit"], .button1, .button2 {
     height: 100%;
     max-height: 300px;
     width: auto;
-    object-fit: cover;
+    overflow: hidden;
 }
 
 #spec-topics-shortcuts > .explore-background > .explore-info p{
     line-height: normal;
-    color: var(--neutral3)
+    color: var(--neutral3);
+    padding: 1em;
 }
 
+/* Interaction with Topics */
 .topic-image {
     width: 80%;
-    height: 100%;
-    top: 0;
+    height: auto;
+    top: -8%;
     left: 10%;
     object-fit: cover;
+    opacity: 0.7;
+    transform: scale(0.9);
+    transition: opacity, transform 0.2s ease-in-out 0ms;
 }
+
+#spec-topics-shortcuts > .explore-background > .explore-content:hover > .topic-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
 /* Alternating background color */
 #spec-topics-shortcuts > .explore-background:nth-of-type(5n + 1) > .explore-content {
     background-color: var(--main-color3);
@@ -781,6 +794,7 @@ input[type="submit"], .button1, .button2 {
     -webkit-text-stroke-color: var(--accent-color);
 }
 
+
 /* Specific Topics */
 #anger > .explore-content > .decor-text::after {
     content: "ANGER";
@@ -805,3 +819,4 @@ input[type="submit"], .button1, .button2 {
 #stress > .explore-content > .decor-text::after {
     content: "STRESS";
 }
+
