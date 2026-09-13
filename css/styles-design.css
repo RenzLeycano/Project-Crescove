@@ -743,13 +743,13 @@ input[type="submit"], .button1, .button2 {
     transform: scale(1);
 }
 
-#spec-topics-shortcuts > .explore-background {
+#spec-topics-shortcuts > a > .explore-background {
     display: flex;
     height: 400px;
     justify-content: space-between;
 }
 
-#spec-topics-shortcuts > .explore-background > .explore-content {
+#spec-topics-shortcuts > a > .explore-background > .explore-content {
     position: relative;
     top: 0;
     height: 100%;
@@ -758,7 +758,7 @@ input[type="submit"], .button1, .button2 {
     overflow: hidden;
 }
 
-#spec-topics-shortcuts > .explore-background > .explore-info p{
+#spec-topics-shortcuts > a > .explore-background > .explore-info p{
     line-height: normal;
     color: var(--neutral3);
     padding: 1em;
@@ -776,45 +776,45 @@ input[type="submit"], .button1, .button2 {
     transition: opacity, transform 0.2s ease-in-out 0ms;
 }
 
-#spec-topics-shortcuts > .explore-background > .explore-content:hover > .topic-image, #emotional-health:hover > .image-container > .topic-image {
+#spec-topics-shortcuts > a > .explore-background > .explore-content:hover > .topic-image, #emotional-health:hover > .image-container > .topic-image {
     opacity: 1;
     transform: scale(1.05);
 }
 
 /* Alternating background color */
-#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 1) > .explore-content {
+#spec-topics-shortcuts > a:nth-of-type(5n + 1) > .explore-background > .explore-content {
     background-color: var(--main-color3);
 }
 
-#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 2) > .explore-content,
-#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 4) > .explore-content {
+#spec-topics-shortcuts > a:nth-of-type(5n + 2) > .explore-background > .explore-content,
+#spec-topics-shortcuts > a:nth-of-type(5n + 4) > .explore-background > .explore-content {
     background-color: var(--main-color2);
 }
 
-#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 3) > .explore-content,
-#spec-topics-shortcuts > .explore-background:nth-of-type(5n + 5) > .explore-content {
+#spec-topics-shortcuts > a:nth-of-type(5n + 3) > .explore-background > .explore-content,
+#spec-topics-shortcuts > a:nth-of-type(5n + 5) > .explore-background > .explore-content {
     background-color: var(--main-color1);
 }
 
 /* Decor text */
-#spec-topics-shortcuts > .explore-background > .explore-content > .decor-text {
+#spec-topics-shortcuts > a > .explore-background > .explore-content > .decor-text {
     bottom: 1%;
     font-size: 2.5em;
 }
 
-#spec-topics-shortcuts > .explore-background:nth-of-type(2n + 1) > .explore-content > .decor-text {
+#spec-topics-shortcuts > a:nth-of-type(2n + 1) > .explore-background > .explore-content > .decor-text {
     color: var(--neutral1);
 }
 
-#spec-topics-shortcuts > .explore-background:nth-of-type(2n) > .explore-content > .decor-text {
+#spec-topics-shortcuts > a:nth-of-type(2n) > .explore-background > .explore-content > .decor-text {
     color: var(--accent-color);
 }
 
-#spec-topics-shortcuts > .explore-background:nth-of-type(2n + 1) > .explore-content > .decor-text::after {
+#spec-topics-shortcuts > a:nth-of-type(2n + 1) > .explore-background > .explore-content > .decor-text::after {
     -webkit-text-stroke-color: var(--neutral1);
 }
 
-#spec-topics-shortcuts > .explore-background:nth-of-type(2n) > .explore-content > .decor-text::after {
+#spec-topics-shortcuts > a:nth-of-type(2n) > .explore-background > .explore-content > .decor-text::after {
     -webkit-text-stroke-color: var(--accent-color);
 }
 
