@@ -10,9 +10,13 @@ h4 {
     font-family: 'Pacifico', serif;
 }
 
-a, p, li{
+p, li{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 200%;
+}
+
+a {
+    line-height: normal;
 }
 
 .subtext {

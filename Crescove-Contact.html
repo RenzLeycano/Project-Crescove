@@ -53,11 +53,11 @@
     </header>
     <main id="contact">
 
-      <section>
+      <section id="contact-info-background">
         <!-- Hotlines -->
         <div class="contact-background" id="hotlines">
           <h2 class="contact-header">Need Help?</h2>
-          <h3>NCMH Crisis Hotline</h3>
+          <h3 class="contact-subheader">NCMH Crisis Hotline</h3>
           <div class="crescove-list">
             <div class="list-sideline"></div>
             <ul>
@@ -136,15 +136,29 @@
         </div>
       </section>
 
-      <section>
-        <h1 class="title">Contact</h1>
-        <p class="subtext">Have any questions</p>
+      <!-- Feedback -->
+      <section id="feedback-background">
+        <div id="feedback">
+          <h1 class="title">Contact</h1>
+          <p class="subtext">Have any questions, feedbacks or need support? Keep in touch!</p>
+          <hr>
 
-        <form action="">
+          <form action="">
+            <label for="username">Name (Optional)</label>
+            <input type="text" name="username" id="username" class="field-input" placeholder="Enter name">
 
-          
-        </form>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="field-input" placeholder="Enter email" required>
+
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" class="field-input" placeholder="Enter feedback">
+
+            <input type="submit" value="Send" class="button1" id="send-feedback">
+          </form>
+          <hr>
+        </div>
       </section>
+
     </main>
     <footer>
       <div id="footer-details">
