@@ -7,13 +7,17 @@ main {
 body {
     overflow-x: hidden;
 }
+
+header, footer {
+    z-index: 20;
+}
+
 /* Header Styles */
 header {
+    position: sticky;
     height: 80px;
     width: 100%;
-    z-index: 20;
     background-color: var(--main-color4);
-    position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,6 +74,7 @@ footer {
     height: 403px;
     background-color: var(--main-color4);
     padding: 3em 8em;
+    bottom: 0;
 }
 #footer-site img {
     width: 225px;
@@ -283,6 +288,25 @@ input[type="submit"], .button1, .button2 {
     transform: scale(1.05);
 }
 
+.back-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    left: 3%;
+}
+
+.back-button > p, .back-button > img {
+    color: var(--neutral3);
+    height: 20px;
+    font-size: 0.9em;
+}
+
+.back-button > p {
+    padding-bottom: 2.1em;
+    padding-left: 1em;
+}
 /* ====================================================================== */
 /* Welcome Screen styles */
 #Welcome-grid {
@@ -937,4 +961,11 @@ input[type="submit"], .button1, .button2 {
 
 #send-feedback {
     margin: 1em auto;
+}
+
+/* ====================================================================== */
+/* Topic Template Page styles */
+
+#topic-template {
+    height: 100vh;
 }
