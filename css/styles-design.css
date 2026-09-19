@@ -1002,4 +1002,32 @@ input[type="submit"], .button1, .button2 {
     font-weight: bold;
 }
 
-
+/* TOpic tips */
+.topic-tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+}
+.tips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral3);
+}
+.tips > p {
+    text-align: center;
+    width: 90%;
+}
+.tip-background {
+    display: flex;
+    background-color: var(--accent-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 4px var(--shadow);
+    margin-bottom: 1em;
+}
+.tip-background > img {
+    max-width: 80%;
+}
