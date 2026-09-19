@@ -529,14 +529,24 @@ input[type="submit"], .button1, .button2 {
 }
 
 /* Topics */
+.shortcut-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
 #topic-shortcut {
     grid-column: 1 / 3;
     background-color: var(--main-color3);
+    display: flex;
 }
  
 #topic-shortcut > .decor-image {
     height: 100%;
-    left: -12%;
+    left: -10%;
 }
 
 #topic-shortcut > .decor-text {
@@ -974,6 +984,14 @@ input[type="submit"], .button1, .button2 {
     grid-template-columns: 1.1fr 3fr;
 }
 
+.topic-decor-image {
+    position: absolute;
+    left: 10%;
+    opacity: 0.25;
+    z-index: -10;
+    filter: blur(5px);
+}
+
 /* Aside Styles */
 #anecdote-preview {
     background-color: var(--bg-accent);
@@ -982,11 +1000,18 @@ input[type="submit"], .button1, .button2 {
     z-index: -1;
 }
 /* Topic info styles */
-#topic-info article{
-    padding: 5em;
+#topic-info {
+    padding: 5em 0;
+}
+#topic-info article, #topic-info #add-anecdote{
+    padding: 0 5em;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+}
+
+#topic-details > h2, #topic-details > h3{
+    margin: 0.5em 0 1em;
 }
 
 /* Buttons linking to create anecdote and view anecdotes */
@@ -1030,4 +1055,17 @@ input[type="submit"], .button1, .button2 {
 }
 .tip-background > img {
     max-width: 80%;
+}
+
+/* Add Anecdote */
+#add-anecdote {
+    margin-top: 2em;
+}
+#anecdote-submit {
+    position: relative;
+    display: flex;
+}
+
+#anecdote-submit hr{
+    width: 40%;
 }

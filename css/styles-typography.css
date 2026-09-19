@@ -3,6 +3,11 @@
 h1, h2, h3, h4, label, blockquote {
     font-family: 'Montserrat', sans-serif;
 }
+
+h2 {
+    color: var(--main-color4);
+}
+
 h4 {
     margin-bottom: 1em;
 }
@@ -61,4 +66,12 @@ hr {
     font-weight: 900;
     color: var(--main-color4);
     font-size: 5.5em;
+}
+
+.disclaimer {
+    font-style: italic;
+    color: var(--neutral4);
+    font-size: 1em;
+    text-align: center;
+    margin: 1em;
 }
