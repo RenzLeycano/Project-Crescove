@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crescove</title>
+    <!--
+      "test"
+      Name: Clarenz Jeffrey D. Leycano
+      Section: WD-202
+    -->
+    <!-- Meta elements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style Sheets -->
+    <link href="css/styles-design.css" rel="stylesheet">
+    <link href="css/styles-reset.css" rel="stylesheet">
+    <link href="css/styles-typography.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="Icons/Crescove Favicon.png">
+     <link rel="icon" sizes="32x32" type="image/img" href="Icons/Crescove Favicon.png">
+     <link rel="apple-touch-icon" sizes="180x180" type="image/img" href="Icons/Crescove Favicon.png">
+     <link rel="icon" sizes="192x192" type="image/img" href="Icons/Crescove Favicon.png">
+  </head>
+   
+  <body>
+    <main id="activity">
+        <a href="Crescove-Home.html">
+            <div class="back-button">
+                <img src="Icons/Back.svg" alt="Back button">
+                <p>Back to Home</p>
+            </div>
+        </a>
+        <div id="background-design">
+            <img src="Img/Hug.png" alt="Hugging people" id="bg-design-image">
+        </div>
+        
+        <form id="mood-activity">
+            <fieldset>
+                <legend class="question">
+                    Describe your current mood right now...
+                </legend>
+
+                <!-- Slider with multiple colors -->
+                <input type="range" name="mood" id="mood" min="1" max="10" value="4">
+                <div id="mood-range">
+                    <div>
+                        <p class="strong">
+                            Angry
+                        </p>
+                        <img src="Img/Angry.png" alt="Angry emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Anxious
+                        </p>
+                        <img src="Img/Anxious.png" alt="Anxious emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Happy
+                        </p>
+                        <img src="Img/Happy.png" alt="Happy emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Confident
+                        </p>
+                        <img src="Img/Confident.png" alt="Angry emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Calm
+                        </p>
+                        <img src="Img/Calm.png" alt="Calm emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Irritated
+                        </p>
+                        <img src="Img/Irritated.png" alt="Irritated emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Lonely
+                        </p>
+                        <img src="Img/Lonely.png" alt="Lonely emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Sad
+                        </p>
+                        <img src="Img/Sad.png" alt="Sad emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Guilty
+                        </p>
+                        <img src="Img/Guilty.png" alt="Guilty emoji" class="emoji">
+                    </div>
+                    <div>
+                        <p class="strong">
+                            Bored
+                        </p>
+                        <img src="Img/Bored.png" alt="Bored emoji" class="emoji">
+                    </div>
+                </div>
+
+                
+
+            </fieldset>
+            <fieldset>
+                <legend class="question">
+                    <hr>
+                    How intense is your selected mood?
+                    <hr>
+                </legend>
+                <div class="tablet-desktop" id="intensity-radio">
+                    <div>
+                        <label for="1">1</label>
+                        <input type="radio" name="intensity" id="1" value="1">
+                    </div>
+                    
+                    <div>
+                        <label for="2">2</label>
+                        <input type="radio" name="intensity" id="2" value="2">
+                    </div>
+                    
+                    <div>
+                        <label for="3">3</label>
+                        <input type="radio" name="intensity" id="3" value="3">
+                    </div>
+                    
+                    <div>
+                        <label for="4">4</label>
+                        <input type="radio" name="intensity" id="4" value="4">
+                    </div>
+                    
+                    <div>
+                        <label for="5">5</label>
+                        <input type="radio" name="intensity" id="5" value="5">
+                    </div>
+                    
+                    <div>
+                        <label for="6">6</label>
+                        <input type="radio" name="intensity" id="6" value="6">
+                    </div>
+                    
+                    <div>
+                        <label for="7">7</label>
+                        <input type="radio" name="intensity" id="7" value="7">
+                    </div>
+
+                    <div>
+                        <label for="8">8</label>
+                        <input type="radio" name="intensity" id="8" value="8">
+                    </div>
+
+                    <div>
+                        <label for="9">9</label>
+                        <input type="radio" name="intensity" id="9" value="9">
+                    </div>
+
+                    <div>
+                        <label for="10">10</label>
+                        <input type="radio" name="intensity" id="10" value="10">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="question">
+                    <hr>
+                    Would you like to share your experience?
+                    <hr>
+                </legend>
+                <textarea name="experience" id="experience" placeholder="Share your experience" class="field-input"></textarea>
+
+                <p class="disclaimer italicize">All submitted content and received results will remain private to the user. The developer wishes to promote Confidentiality regarding the user's feelings to allow them to practice opening up and expressing themselves in real life.</p>
+
+                <div id="activity-submit">
+                    <hr>
+                    <input type="submit" value="Submit" class="button1" id="activity-send">
+                    <hr>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+  </body>
+</html>

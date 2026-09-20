@@ -1,7 +1,7 @@
 @import url(styles-colors.css);
 
 main {
-    height: 100%;
+    min-height: 100vh;
 }
 
 body {
@@ -184,6 +184,13 @@ input[type="submit"], .button1, .button2 {
     align-items: center;
     justify-content: center;
 }
+
+textarea {
+    padding: 1em 2em;
+    min-height: 7em;
+    resize: vertical;
+}
+
 .button1 {
     border: none;
     font-weight: bold;
@@ -202,6 +209,18 @@ input[type="submit"], .button1, .button2 {
     justify-content: center;
     padding: 1.5em 2.5em 1em;
 }
+
+#anecdote-submit, #activity-submit, .question{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#anecdote-submit hr, #activity-submit hr, .question hr{
+    width: 40%;
+}
+
 
 /* Image Styles w/ Decor */
 .portrait, .explore-background {
@@ -291,6 +310,7 @@ input[type="submit"], .button1, .button2 {
     transform: scale(1.05);
 }
 
+/* Back Button */
 .back-button {
     position: absolute;
     display: flex;
@@ -298,6 +318,7 @@ input[type="submit"], .button1, .button2 {
     align-items: center;
     top: 15%;
     left: 3%;
+    z-index: 5;
 }
 
 .back-button > p, .back-button > img {
@@ -594,6 +615,182 @@ input[type="submit"], .button1, .button2 {
 
 #about-shortcut > .decor-text::after {
     content: "ABOUT";
+}
+
+/* ====================================================================== */
+/* Activity styles */
+/* Background Design */
+#activity {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#activity > a > .back-button {
+    top: 3em;
+}
+#background-design {
+    background-color: var(--bg-accent);
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+#bg-design-image {
+    opacity: 0.25;
+}
+
+#mood-activity {
+    z-index: 1;
+    height: auto;
+    padding: 6em 20% 2em;
+    width: 100%;
+}
+
+#mood-activity > fieldset {
+    border: none;
+    margin-top: 2em;
+}
+
+.question{
+    text-align: center;
+    padding: 1em 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+/* Activity 1 - Mood */
+#mood {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 80px;
+    border-radius: 30px;
+    padding: 0 3.5%;
+    background: linear-gradient(90deg,
+    #630000 5%,
+    #FF5500 15%,
+    #FBBC05 25%,
+    #FBFF84 35%,
+    #DDFF00 45%,
+    #34A853 55%,
+    #00FFE1 65%,
+    #0053DD 75%,
+    #FB00FF 85%,
+    #484848 95%);
+    box-shadow: 0 4px 4px var(--shadow);
+}
+
+#mood::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 100px;
+    background-color: var(--neutral2);
+    border-radius: 3px;
+}
+
+#mood-range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2em;
+    margin-top: 1em;
+    padding: 0 1.25em;
+}
+
+#mood-range div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+}
+.emoji {
+    width: 3.5em;
+}
+
+/* Activity 2 - Intensity */
+#intensity-radio {
+    width: 100%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#intensity-radio div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--neutral2);
+    border-radius: 15px;
+}
+
+#intensity-radio div:first-of-type::after {
+    content: "Lowest";
+    bottom: -40%;
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: italic;
+}
+
+#intensity-radio div:last-of-type::after {
+    content: "Highest";
+    bottom: -40%;
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: italic;
+}
+
+input[type="radio"][id="1"]:checked {
+    background-color: #FFFDD0;
+}
+input[type="radio"][id="2"]:checked {
+    background-color: #FFFACD;
+}
+input[type="radio"][id="3"]:checked {
+    background-color: #EEDC82;
+}
+input[type="radio"][id="4"]:checked {
+    background-color: #FFEF00;
+}
+input[type="radio"][id="5"]:checked {
+    background-color: #FFFF00;
+}
+input[type="radio"][id="6"]:checked {
+    background-color: #FFDF00;
+}
+input[type="radio"][id="7"]:checked {
+    background-color: #FFD700;
+}
+input[type="radio"][id="8"]:checked {
+    background-color: #E1AD01;
+}
+input[type="radio"][id="9"]:checked {
+    background-color: #9B870C;
+}
+input[type="radio"][id="10"]:checked {
+    background-color: #808000;
+}
+
+/* Activity 3 - Experience */
+#experience {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 /* ====================================================================== */
@@ -1063,14 +1260,6 @@ input[type="submit"], .button1, .button2 {
 #add-anecdote {
     margin-top: 2em;
 }
-#anecdote-submit {
-    position: relative;
-    display: flex;
-}
-
-#anecdote-submit hr{
-    width: 40%;
-}
 
 /* ====================================================================== */
 /* Emotional Health Page styles */
@@ -1080,30 +1269,46 @@ input[type="submit"], .button1, .button2 {
     gap: 2em;
 }
 
-#topics-preview > a {
+#topics-preview{
+    position: relative;
     display: flex;
-    height: 5%;
-    align-items: center;
-    justify-content: center;
-}
-
-#topics-preview > a .explore-background {
     height: 100%;
+    z-index: 3;
+}
+
+.preview-background {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    height: 3.5em;
+    z-index: 4;
+    background: linear-gradient(90deg,
+        var(--main-color2) 10%,
+        transparent
+    );
+    overflow: hidden;
+    border-radius: 30px;
+    transform: scale(1);
+    transition: transform, background-color, box-shadow 0.5s ease-in-out 0ms;
+}
+
+.preview-background:hover {
     background-color: var(--bg-accent2);
-    transition: background-color 0.5s ease-in-out;
+    transform: scale(1.1);
+    transition: background-color 0.3s ease-in-out 0ms;
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
-
-#topics-preview > a:hover .explore-background{
+.preview-background:active {
     background-color: var(--accent-color);
+    transform: scale(1.05);
 }
 
-#topics-preview > a > .explore-background > .explore-content > .decor-text{
+.preview-background > .explore-content > .decor-text{
     font-size: 150%;
     left: 35%;
     font-weight: 500;
 }
-
 
 .preview-image {
     position: absolute;
