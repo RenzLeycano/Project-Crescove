@@ -15,7 +15,7 @@ h4 {
     font-family: 'Pacifico', serif;
 }
 
-a, p, li, textarea{
+a, p, li, textarea, div{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 200%;
 }
