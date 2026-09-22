@@ -466,6 +466,7 @@ input:focus, textarea:focus {
     top: 35%;
     left: 80px;
     font-weight: 800;
+    line-height: 1em;
     font-size: 4em;
     text-shadow: 0 2px 4px var(--shadow);
 }
@@ -824,7 +825,7 @@ input[type="radio"][id="10"]:checked {
     justify-content: center;
     align-items: end;
     bottom: -5%;
-    left: 10%;
+    margin: 0 27%;
     width: 700px;
     height: 400px;
     overflow: hidden;
@@ -833,8 +834,8 @@ input[type="radio"][id="10"]:checked {
 .envelope-background {
     background-color: var(--neutral1);
     border-right: 70px solid var(--neutral4);
-    box-shadow: 0 0 4px var(--shadow);
-    opacity: 0.3;
+    box-shadow: 0 0 50px 5px var(--shadow);
+    opacity: 1;
     z-index: -2;
 }
 
@@ -896,7 +897,7 @@ input[type="radio"][id="10"]:checked {
     width: 500px;
     height: 375px;
     background-color: var(--accent-color);
-    left: 16.5%;
+    left: 33.5%;
     border-radius: 30px;
     box-shadow: 0 4px 8.2px 6px var(--shadow);
     align-items: center;
@@ -937,18 +938,21 @@ input[type="radio"][id="10"]:checked {
 /* Result Info */
 .result-info {
     position: absolute;
-    right: 10%;
+    right: 25%;
+    left: 25%;
     text-align: center;
-    max-width: 350px;
+    max-width: 50%;
 }
 
 #advice-prompt {
-    top: 35%;
+    top: 10%;
 }
 
 #home-button {
-    right: 15%;
-    bottom: 35%;
+    display: flex;
+    justify-content: center;
+    bottom: 12%;
+    z-index: 10;
 }
 
 /* Envelope Animation */
