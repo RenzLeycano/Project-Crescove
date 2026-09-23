@@ -51,15 +51,14 @@
     </header>
 
     <!-- Background video -->
-    <video autoplay muted loop playsinline class="crescove-bg-video">
-      <source src="Video/Crescove-BG-Video1.mp4" type="video/mp4">
-      <source src="Video/Crescove-BG-Video2.mp4" type="video/mp4">
-      <source src="Video/Crescove-BG-Video3.mp4" type="video/mp4">
-      <source src="Video/Crescove-BG-Video4.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="crescove-bg-video">
+      
     </video>
 
+    <script src="main.js"></script>
+
     <main id="Welcome-grid">
-      <section class="left-side mobile">
+      <section class="welcome mobile">
         
         <img src="Img/Crescove-White-Logo.png" alt="Crescove logo" id="Welcome-logo">
         <p class="subtext">
@@ -74,21 +73,19 @@
         
       </section>
 
-      <section class="right-side tablet-desktop">
+      <section class="decor-portraits tablet-desktop">
         <div class="portrait" id="true">
           <img src="Img/Hug.png" alt="Two people hugging" class="decor-image">
           <p class="decor-text phrase1">BE TRUE TO</p>
           <p class="decor-text phrase2">YOURSELF</p>
         </div>
-        <div id="small-portrait">
-          <div class="portrait" id="you">
-            <img src="Img/Mental Health.png" alt="Person's mind" class="decor-image">
-            <p class="decor-text">HOW'RE<br>YOU?</p>
-          </div>
-          <div class="portrait" id="loved">
-            <p class="decor-text">YOU'RE<br>LOVED</p>            
-            <img src="Img/Emotions.png" alt="Person's heart" class="decor-image">
-          </div>
+        <div class="portrait" id="you">
+          <img src="Img/Mental Health.png" alt="Person's mind" class="decor-image">
+          <p class="decor-text">HOW'RE<br>YOU?</p>
+        </div>
+        <div class="portrait" id="loved">
+          <p class="decor-text">YOU'RE<br>LOVED</p>            
+          <img src="Img/Emotions.png" alt="Person's heart" class="decor-image">
         </div>
       </section>
     </main>

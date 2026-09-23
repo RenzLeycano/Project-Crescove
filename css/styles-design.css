@@ -198,12 +198,12 @@ input, textarea {
     transition: outline 0.3s ease-in-out 0ms, box-shadow 0.3s ease-in-out 0ms;
 }
 
-input:hover, textarea:hover {
+input:hover, textarea:hover, .button1:hover, .button2:hover {
     outline: var(--accent-color);
     box-shadow: 0 0 10px var(--accent-color);
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, .button1:active, .button2:active {
     outline: var(--neutral4);
     box-shadow: 0 0 10px var(--main-color4);
 }
@@ -245,17 +245,9 @@ input:focus, textarea:focus {
     justify-content: center;
     display: flex;
     background-color: var(--neutral1);
-    border-radius: 5px;
     box-shadow: 0 4px 4px var(--shadow);
     margin: 0.25em;
     text-align: center;
-}
-
-#small-portrait {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0.5em;
-    height: 48%;
 }
 
 .decor-image {
@@ -325,6 +317,7 @@ input:focus, textarea:focus {
 
 .explore-background:active {
     transform: scale(1.05);
+    box-shadow: 0 0 20px 2px var(--main-color4);
 }
 
 /* Back Button */
@@ -351,65 +344,66 @@ input:focus, textarea:focus {
 /* ====================================================================== */
 /* Welcome Screen styles */
 #Welcome-grid {
-    display: grid;
-    grid-template-columns: 1.7fr 1fr;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-.crescove-bg-video {
+#crescove-bg-video {
     position: fixed;
     z-index: -10;
     width: 100%;
+    min-height: 100vh;
     right: 0;
     object-fit: cover;
     transform: scaleX(-1);
     right: 0;
+    filter: brightness(40%);
 }
+
 #Welcome-logo {
     object-fit: cover;
     width: 366px;
     height: 150px;
 }
 
-.left-side {
-    padding: 0 5em 12em;
+.welcome {
+    padding: 0 3em 12em;
     display: flex;
     justify-content: center;    
     flex-direction: column;
     align-items: center;
     gap: 2em;
+    min-height: 60vh;
+    padding: 5em;
+    transition: box-shadow 1s ease-in-out;
 }
 
-.right-side {
-    padding: 3em 5em;
-}
-
-/* Left Side - Welcome */
-.left-side .subtext{
+/* Welcome */
+.welcome .subtext{
     color: var(--neutral1);
-    max-width: 30em;
+    max-width: 80%;
     text-align: center;
 }
 
-/* Right side - Portraits */
-.right-side {
-    background: linear-gradient(-90deg,
-    var(--bg-accent2),
-    transparent);
+/* Portraits */
+.decor-portraits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 40vh;
+    width: 100%;
 }
-.right-side .portrait .decor-text {
-    font-size: 275%;
+.decor-portraits .portrait{
+    box-shadow: none;    
 }
 .portrait {
     overflow: hidden;
     opacity: 0.9;
 }
-.decor-text.phrase1 {
-    font-size: 5em;
-}
+
 .decor-text.phrase2 {
     color: var(--accent-color);
-    font-size: 6em;
+    font-size: 4em;
     bottom: 1%;
 }
 
@@ -430,15 +424,13 @@ input:focus, textarea:focus {
     content: "YOU'RE\aLOVED";
 }
 
-#true {
-    width: 100%;
-    height: 40%;
-    background-color: var(--main-color3);
-}
-
-#you, #loved {
+#true, #you, #loved {
     width: 100%;
     height: 100%;
+}
+
+#true {
+    background-color: var(--main-color3);
 }
 
 #you {
