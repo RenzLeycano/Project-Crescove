@@ -2,6 +2,7 @@
 
 main {
     min-height: 100vh;
+    position: relative;
 }
 
 body {
@@ -475,9 +476,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 }
 
 /* Main Tag */
-#home {
-    position: relative;
-}
+
 #home > .background-image {
     position: absolute;
     top: 0;
@@ -635,7 +634,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 /* Activity styles */
 /* Background Design */
 #activity {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -810,8 +808,6 @@ input[type="radio"][id="10"]:checked {
 /* ====================================================================== */
 /* Activity Results styles */
 #results {
-    position: relative;
-    min-height: 100vh;
     overflow-y: hidden;
 }
 
@@ -1494,4 +1490,11 @@ input[type="radio"][id="10"]:checked {
     bottom: -30%;
     filter: blur(1px);
     opacity: 0.7;
+}
+
+/* ====================================================================== */
+/* Anecdotes Page styles */
+
+#anecdotes {
+    background-color: var(--bg-accent);
 }
