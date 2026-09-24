@@ -809,6 +809,9 @@ input[type="radio"][id="10"]:checked {
 /* Activity Results styles */
 #results {
     overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Envelope decor */
@@ -818,7 +821,6 @@ input[type="radio"][id="10"]:checked {
     justify-content: center;
     align-items: end;
     bottom: -5%;
-    margin: 0 27%;
     width: 700px;
     height: 400px;
     overflow: hidden;
