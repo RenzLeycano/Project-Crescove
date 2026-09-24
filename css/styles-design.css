@@ -345,7 +345,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 /* ====================================================================== */
 /* Welcome Screen styles */
 #index {
-    background-color: var(--main-color4);
+    background-color: var(--neutral2);
 }
 
 #Welcome-grid {
@@ -389,6 +389,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     color: var(--neutral1);
     max-width: 80%;
     text-align: center;
+    color: var(--neutral4);
 }
 
 /* Portraits */
@@ -407,13 +408,14 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     margin: 0;
 }
 
-.decor-text.phrase1 {
+.decor-portraits .decor-text {
     top: 15%;
+    font-size: 4.5em;
 }
 
 .decor-text.phrase2 {
     color: var(--accent-color);
-    font-size: 5.5em;
+    font-size: 6em;
     top: 35%;
 }
 
@@ -744,6 +746,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 }
 
 input[type="radio"] {
+    -webkit-appearance: none;
     appearance: none;
     width: 30px;
     height: 30px;
