@@ -351,7 +351,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #Welcome-grid {
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 #crescove-bg-video {
@@ -395,7 +395,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 .decor-portraits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 30vh;
+    height: 40vh;
     width: 100%;
 }
 .decor-portraits .portrait{
@@ -453,7 +453,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 
 #true img, #you img, #loved img {
     top: -10%;
-    width: 60%;
+    width: 90%;
     object-fit: cover;
 }
 /* ====================================================================== */
