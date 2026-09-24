@@ -245,7 +245,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: var(--neutral1);
     box-shadow: 0 4px 4px var(--shadow);
     margin: 0.25em;
@@ -611,6 +610,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 /* About Shortcut */
 #about-shortcut {
     background-color: var(--accent-color);
+    align-items: center;
 }
 
 #about-shortcut > img {
@@ -1030,7 +1030,7 @@ input[type="radio"][id="10"]:checked {
     font-size: 1.7em;
     padding: 1.25em;
     background-color: var(--main-color1);
-    margin-left: 4em;
+    margin: 0 0 5em 4em
 }
 
 #site-mission {
