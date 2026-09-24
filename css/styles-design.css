@@ -576,7 +576,8 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #topic-shortcut {
     grid-column: 1 / 3;
     background-color: var(--main-color3);
-    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
  
 #topic-shortcut > .decor-image {
