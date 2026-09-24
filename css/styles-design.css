@@ -243,8 +243,9 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 /* Image Styles w/ Decor */
 .portrait, .explore-background {
     position: relative;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--neutral1);
     box-shadow: 0 4px 4px var(--shadow);
     margin: 0.25em;
@@ -580,7 +581,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
  
 #topic-shortcut > .decor-image {
     height: 100%;
-    left: -10%;
 }
 
 #topic-shortcut > .decor-text {
@@ -892,7 +892,6 @@ input[type="radio"][id="10"]:checked {
     width: 500px;
     height: 375px;
     background-color: var(--accent-color);
-    left: 33.5%;
     border-radius: 30px;
     box-shadow: 0 4px 8.2px 6px var(--shadow);
     align-items: center;
