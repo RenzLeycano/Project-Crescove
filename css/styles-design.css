@@ -812,10 +812,15 @@ input[type="radio"][id="10"]:checked {
 /* ====================================================================== */
 /* Activity Results styles */
 #results {
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
     overflow-y: hidden;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    background-color: var(--neutral1);
+    z-index: 100;
 }
 
 /* Envelope decor */
