@@ -14,9 +14,21 @@ video.src = videoSources[index];
 video.load();
 });
 
+// Display Results and Hide Activity
+const activity = document.getElementById('mood-activity');
+const results = document.getElementById('results');
+const actSubmit = document.getElementById('activity-send');
+
+if(actSubmit){
+    actSubmit.addEventListener('submit', function(event){
+        event.preventDefault();
+        activity.classList.add('hide-activity');
+        results.classList.add('show-results');
+    })
+}
 // Display Results based on Activity
 
-// const activity = document.getElementById('mood-activity')
+// 
 
 // activity.addEventListener('submit', function(event) {
 //     event.preventDefault(); 
