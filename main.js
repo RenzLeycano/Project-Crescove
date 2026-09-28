@@ -36,10 +36,6 @@ activity.addEventListener('submit', function(event){
     let mood = document.getElementById('mood').value;
     let intensity = document.querySelector('input[name="intensity"]:checked').value;
 
-    console.log(mood);
-    console.log(intensity);
-
-
     activity.classList.add('hide-activity');
     results.classList.add('show-results');
 
@@ -49,26 +45,30 @@ activity.addEventListener('submit', function(event){
     const resultVal = baseVal + (random * intensity);
 
     let index;
-    if(resultVal >= 0 && resultVal < 10) {
+    if(resultVal >= 0 && resultVal < 5) {
         index = 0;
-    } else if(resultVal >= 10 && resultVal < 20) {
+    } else if(resultVal >= 5 && resultVal < 10) {
         index = 1;
-    } else if(resultVal >= 20 && resultVal < 30) {
+    } else if(resultVal >= 10 && resultVal < 15) {
         index = 2;
-    } else if(resultVal >= 30 && resultVal <= 40) {
+    } else if(resultVal >= 15 && resultVal < 20) {
         index = 3;
+    } else if(resultVal >= 20 && resultVal < 25) {
+        index = 3;
+    } else if(resultVal >= 25 && resultVal < 30) {
+        index = 4;
+    } else if(resultVal >= 30 && resultVal <= 40) {
+        index = 4;
     }
-
-    console.log(resultVal)
-    console.log(index)
 
     switch (Number(mood)) {
         case 1:        //Angry
             const angry = [
+                "Take care of yourself and make yourself happy by doing the things you love.",
                 "Just keep going! Don't dwell too much into what is bothering you.",
                 "Don't feel too bad! Next time, things will be better.",
                 "Calm down, be positive! Do not attempt to do any negative things or think negative thoughts.",
-                "Take care of yourself and make yourself happy by doing the things you love."
+                "Find some ways to vent your problems! Talk to a friend or just find a place to release that anger, as long as it won't hurt anyone!"
             ]
             moodColor.style.backgroundColor = "var(--angry)";
             moodTitle.textContent = "Angry";
@@ -77,10 +77,11 @@ activity.addEventListener('submit', function(event){
 
         case 2:        //Anxious
             const anxious = [
+                "Stay calm and sort through it carefully. You can always ask for help if you need to.",
                 "Don't think too much about it! The more you think of that, the more you'll ruin your mood and you'll struggle focusing.",
-                "Inhale, Exhale! Clear your mind and thread carefully. You got this!",
+                "Think happy thoughts and calmly sort out responsibilities. Know your priority.",
                 "Try to calm down. It won't be as challenging if you think its not. Fight your fears!",
-                "Think happy thoughts and calmly sort out responsibilities. Know your priority."
+                "Inhale. Exhale. Clear your mind and thread carefully. You got this!"
             ]
             moodColor.style.backgroundColor = "var(--anxiety)"
             moodTitle.textContent = "Anxiety";
@@ -89,10 +90,11 @@ activity.addEventListener('submit', function(event){
 
         case 3:        //Happy
             const happy = [
-                "Don't think too much about it! The more you think of that, the more you'll ruin your mood and you'll struggle focusing.",
-                "Inhale, Exhale! Clear your mind and thread carefully. You got this!",
-                "Try to calm down. It won't be as challenging if you think its not. Fight your fears!",
-                "Think happy thoughts and calmly sort out responsibilities. Know your priority."
+                "Make sure to take a break once in a while!",
+                "Good job! Keep it up. A smile a day keeps depression at bay.",
+                "Enjoy your happiness uwu.",
+                "Happy for you! Maybe try to share that positivity with your friends?",
+                "You radiate everyone around you, make sure to keep some of that positivity for yourself as well!"
             ]
             moodColor.style.backgroundColor = "var(--happy)";
             moodTitle.textContent = "Happy";
@@ -100,10 +102,11 @@ activity.addEventListener('submit', function(event){
             break;
         case 4:        //Confident
             const confident = [
-                "Stay humble, keep inspiring others, and use that strong momentum to help those around you grow.",
+                "You're lowkey goated.",
                 "How to be you po? Just kidding, enjoy the moment!",
                 "You're the light in the sea of darkness. Continue to thrive and inspire others.",
-                "Stay Humble! Cherish the support you get."
+                "Stay Humble! Cherish the support you get.",
+                "Stay humble, keep inspiring others, and use that strong momentum to help those around you grow."
             ]
             moodColor.style.backgroundColor = "var(--confident)";
             moodTitle.textContent = "Confident";
@@ -111,10 +114,11 @@ activity.addEventListener('submit', function(event){
             break;
         case 5:        //Calm
             const calm = [
+                "You're lowkey goated.",
                 "Stay right there in that peaceful state.",
                 "Keep protecting your quiet energy from the noise around you.",
                 "Keep calm and eat.",
-                "."
+                "Cherish your peaceful energy. Don't let the world bother you."
             ]
             moodColor.style.backgroundColor = "var(--calm)";
             moodTitle.textContent = "Calm";
@@ -124,8 +128,9 @@ activity.addEventListener('submit', function(event){
             const irritated = [
                 "Take a deep breath, step back from what is draining your energy.",
                 "Let yourself feel that frustration without holding it inside.",
-                "Cheer up, try not to think about it. Focus on your hobbies or something, which is more fun than thinking about things that stress you out.",
-                "Let it out. Don’t bottle your feelings. Do not be afraid of sharing."
+                "It's okay to feel irritated, besides, life won't always go the way you expected it to.",
+                "Let it out. Don’t bottle your feelings. Do not be afraid of sharing.",
+                "Cheer up, try not to think about it. Focus on your hobbies or something, which is more fun than thinking about things that stress you out."
             ]
             moodColor.style.backgroundColor = "var(--irritated)";
             moodTitle.textContent = "Irritated";
@@ -133,10 +138,11 @@ activity.addEventListener('submit', function(event){
             break;
         case 7:        //Lonely
             const lonely = [
-                "Be gentle with your heart, remember that your worth doesn't depend on forcing connection, and know that you are completely enough just as you are.",
+                "Try doing what you love the most and explore what you love! Maybe you could meet people with similar interests.",
+                "Let it out. Don’t bottle your feelings. Do not be afraid of sharing.",
                 "Be yourself. There’s nothing wrong with being yourself. Maybe you just haven’t found your people yet. Don’t give up.",
                 "Try and reach out to your friends. You can't stay longing for a connection. Try and meet new people who could support you.",
-                "Let it out. Don’t bottle your feelings. Do not be afraid of sharing."
+                "Be gentle with your heart, remember that your worth doesn't depend on forcing connection, and know that you are completely enough just as you are."
             ]
             moodColor.style.backgroundColor = "var(--lonely)";
             moodTitle.textContent = "Lonely";
@@ -144,9 +150,9 @@ activity.addEventListener('submit', function(event){
             break;
         case 8:        //Sad
             const sad = [
-                "Let yourself finally break down and cry, because holding back all that heavy pain only makes it harder to heal.",
-                "Let it out. Don’t bottle your feelings. Do not be afraid of sharing.",
                 "Talk to someone you fully trust. Don’t be afraid to open up.",
+                "Let it out. Don’t bottle your feelings. Do not be afraid of sharing.",
+                "Let yourself finally break down and cry, because holding back all that heavy pain only makes it harder to heal.",
                 "It's difficult to know when to move forward. But at the end of the day, we have to. You don't have to rush, take your time.",
                 "Nothing heals us like letting people know our scariest parts: When people listen to you cry and lament, and look at you with love, it's like they are holding the baby of you."
             ]
@@ -179,6 +185,5 @@ activity.addEventListener('submit', function(event){
             adviceResult.textContent = bored[index];
             break;
     }
-    // adviceResult.textContent = "Hello, World!";
 })
 
