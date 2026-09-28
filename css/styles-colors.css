@@ -12,4 +12,16 @@
     --bg-accent: #76AFEE26;
     --bg-accent2: #638FB9AA;
     --bg-accent3: #FFFFFFAA;
+
+    /* Mood colors */
+    --angry: #630000;
+    --anxiety: #FF5500;
+    --happy: #FBBC05;
+    --confident: #FBFF84;
+    --calm: #DDFF00;
+    --irritated: #34A853;
+    --lonely: #00FFE1;
+    --sad: #0053DD;
+    --guilty: #FB00FF;
+    --bored: #484848;
 }

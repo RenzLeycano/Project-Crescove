@@ -687,16 +687,16 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     border-radius: 30px;
     padding: 0 3.5%;
     background: linear-gradient(90deg,
-    #630000 5%,
-    #FF5500 15%,
-    #FBBC05 25%,
-    #FBFF84 35%,
-    #DDFF00 45%,
-    #34A853 55%,
-    #00FFE1 65%,
-    #0053DD 75%,
-    #FB00FF 85%,
-    #484848 95%);
+    var(--angry) 5%,
+    var(--anxiety) 15%,
+    var(--happy) 25%,
+    var(--confident) 35%,
+    var(--calm) 45%,
+    var(--irritated) 55%,
+    var(--lonely) 65%,
+    var(--sad) 75%,
+    var(--guilty) 85%,
+    var(--bored) 95%);
     box-shadow: 0 4px 4px var(--shadow);
 }
 
@@ -828,7 +828,7 @@ input[type="radio"][id="10"]:checked {
 }
 
 .hide-activity {
-    display: none;
+    display: none !important;
 }
 /* Envelope decor */
 .envelope, .envelope-background {
@@ -969,6 +969,34 @@ input[type="radio"][id="10"]:checked {
     justify-content: center;
     bottom: 12%;
     z-index: 10;
+}
+
+#advice-info {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#advice-details {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+}
+
+#mood-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mood-info {
+    padding-left: 1em;
+    font-weight: 600;
+    font-size: 1.25em;
+    font-style: italic;
 }
 
 /* Envelope Animation */

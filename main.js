@@ -21,40 +21,93 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Display Results and Hide Activity
-const activity = document.getElementById('mood-activity');
-const results = document.getElementById('results');
-const actSubmit = document.getElementById('activity-send');
+const activity = document.getElementById('activity');
+const results = document.getElementById('result-display');
+
 const adviceResult = document.getElementById('advice-details');
+const moodTitle = document.getElementById('mood-info');
 
 
 
-if(actSubmit){
-    actSubmit.addEventListener('submit', function(event){
-        event.preventDefault();
+activity.addEventListener('submit', function(event){
+    event.preventDefault();
 
-        let mood = document.getElementById('mood').value;
-        let intensity = document.querySelector('input[name="intensity"]:checked');
+    let mood = document.getElementById('mood').value;
+    let intensity = document.querySelector('input[name="intensity"]:checked').value;
 
-        console.log(mood);
-        console.log(intensity);
+    console.log(mood);
+    console.log(intensity);
 
 
-        activity.classList.add('hide-activity');
-        results.classList.add('show-results');
+    activity.classList.add('hide-activity');
+    results.classList.add('show-results');
 
 // Display Results based on Activity
-        switch(mood) {
-            case(1):        //Angry
-            case(2):        //Anxious
-            case(3):        //Happy
-            case(4):        //Confident
-            case(5):        //Calm
-            case(6):        //Irritated
-            case(7):        //Lonely
-            case(8):        //Sad
-            case(9):        //Guilty
-            case(10):       //Bored
-        }
-        adviceResult.textContent = "Hello, World!";
-    })
-}
+    const baseVal = 0;
+    const random = Math.floor(Math.random() * 5);
+    const resultVal = baseVal + (random * intensity);
+
+    let index;
+    if(resultVal >= 0 && resultVal < 10) {
+        index = 0;
+    } else if(resultVal >= 10 && resultVal < 20) {
+        index = 1;
+    } else if(resultVal >= 20 && resultVal < 30) {
+        index = 2;
+    } else if(resultVal >= 30 && resultVal <= 40) {
+        index = 3;
+    }
+
+    console.log(resultVal)
+    console.log(index)
+
+    switch (Number(mood)) {
+        case 1:        //Angry
+            const angry = [
+                "Just keep going! Don't dwell too much into what is bothering you.",
+                "Don't feel too bad! Next time, things will be better.",
+                "Calm down, be positive! Do not attempt to do any negative things or think negative thoughts.",
+                "Take care of yourself and make yourself happy by doing the things you love."
+            ]
+            moodTitle.textContent = "Angry";
+            adviceResult.textContent = angry[index];
+            break;
+
+        case 2:        //Anxious
+            const anxious = [
+                "Don't think too much about it! The more you think of that, the more you'll ruin your mood and you'll struggle focusing.",
+                "Inhale, Exhale! Clear your mind and thread carefully. You got this!",
+                "Try to calm down. It won't be as challenging if you think its not. Fight your fears!",
+                "Think happy thoughts and calmly sort out responsibilities. Know your priority."
+            ]
+            moodTitle.textContent = "Angry";
+            adviceResult.textContent = anxious[index];
+            break;
+
+        case 3:        //Happy
+            const happy = [
+                "Don't think too much about it! The more you think of that, the more you'll ruin your mood and you'll struggle focusing.",
+                "Inhale, Exhale! Clear your mind and thread carefully. You got this!",
+                "Try to calm down. It won't be as challenging if you think its not. Fight your fears!",
+                "Think happy thoughts and calmly sort out responsibilities. Know your priority."
+            ]
+            adviceResult.textContent = anxious[index];
+            break;
+        case 4:        //Confident
+            break;
+        case 5:        //Calm
+            break;
+        case 6:        //Irritated
+            break;
+        case 7:        //Lonely
+            break;
+        case 8:        //Sad
+            break;
+        case 9:        //Guilty
+            break;
+        case 10:       //Bored
+            break;
+    }
+    // adviceResult.textContent = "Hello, World!";
+})
+
