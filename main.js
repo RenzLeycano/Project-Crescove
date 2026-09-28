@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const activity = document.getElementById('activity');
 const results = document.getElementById('result-display');
 
+const moodColor = document.getElementById('mood-color');
 const adviceResult = document.getElementById('advice-details');
 const moodTitle = document.getElementById('mood-info');
 
@@ -69,6 +70,7 @@ activity.addEventListener('submit', function(event){
                 "Calm down, be positive! Do not attempt to do any negative things or think negative thoughts.",
                 "Take care of yourself and make yourself happy by doing the things you love."
             ]
+            moodColor.style.backgroundColor = "var(--angry)";
             moodTitle.textContent = "Angry";
             adviceResult.textContent = angry[index];
             break;
@@ -80,7 +82,8 @@ activity.addEventListener('submit', function(event){
                 "Try to calm down. It won't be as challenging if you think its not. Fight your fears!",
                 "Think happy thoughts and calmly sort out responsibilities. Know your priority."
             ]
-            moodTitle.textContent = "Angry";
+            moodColor.style.backgroundColor = "var(--anxiety)"
+            moodTitle.textContent = "Anxiety";
             adviceResult.textContent = anxious[index];
             break;
 
@@ -91,11 +94,31 @@ activity.addEventListener('submit', function(event){
                 "Try to calm down. It won't be as challenging if you think its not. Fight your fears!",
                 "Think happy thoughts and calmly sort out responsibilities. Know your priority."
             ]
-            adviceResult.textContent = anxious[index];
+            moodColor.style.backgroundColor = "var(--happy)";
+            moodTitle.textContent = "Happy";
+            adviceResult.textContent = happy[index];
             break;
         case 4:        //Confident
+            const confident = [
+                "Stay humble, keep inspiring others, and use that strong momentum to help those around you grow.",
+                "How to be you po? Just kidding, enjoy the moment!",
+                "You're the light in the sea of darkness. Continue to thrive and inspire others.",
+                "Stay Humble! Cherish the support you get."
+            ]
+            moodColor.style.backgroundColor = "var(--confident)";
+            moodTitle.textContent = "Confident";
+            adviceResult.textContent = confident[index];
             break;
         case 5:        //Calm
+            const calm = [
+                "Stay right there in that peaceful state.",
+                "Keep protecting your quiet energy from the noise around you.",
+                "Keep calm and eat.",
+                "."
+            ]
+            moodColor.style.backgroundColor = "var(--calm)";
+            moodTitle.textContent = "Calm";
+            adviceResult.textContent = calm[index];
             break;
         case 6:        //Irritated
             break;
