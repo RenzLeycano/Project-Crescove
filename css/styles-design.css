@@ -25,7 +25,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1em 0 2em;
     top: 0;
 }
 
@@ -262,6 +261,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     position: absolute;
     font-family: Verdana, Geneva, Tahoma, sans-serif sans-serif;
     text-align: center;
+    width: 100%;
     font-size: 3.5em;
     font-weight: 900;
     line-height: normal;
@@ -466,7 +466,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     font-size: 4em;
     text-shadow: 0 2px 4px var(--shadow);
 }
-.hero-image p {
+.home.hero-image p {
     position: absolute;
     max-width: 532px;
     top: 65%;
@@ -1037,8 +1037,6 @@ input[type="radio"][id="10"]:checked {
     background-color: var(--main-color3);
     padding-top: 5em;
     max-width: 486px;
-    height: 550px;
-    margin: 5em;
     align-items: center;
     z-index: -2;
     box-shadow: 0 4px 4px var(--shadow);
@@ -1068,20 +1066,13 @@ input[type="radio"][id="10"]:checked {
 /* Blockquote */
 #quote {
     float: right;
-    display: flex;
-    width: 345px;
-    height: 358px;
+    height: auto;
+    display: unset;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     font-size: 1.7em;
     padding: 1.25em;
     background-color: var(--main-color1);
     margin: 0 0 5em 4em
-}
-
-#site-mission {
-    padding: 1em 3em 3em 2em;
 }
 
 @keyframes pulse {
@@ -1147,8 +1138,6 @@ input[type="radio"][id="10"]:checked {
     color: var(--accent-color);
     font-size: 7em;
     top: 15%;
-    left: 37%;
-    right: 37%;
 }
 
 .hero-image.topic .decor-text::after {
@@ -1163,13 +1152,11 @@ input[type="radio"][id="10"]:checked {
     font-style: italic;
     font-weight: bold;
     text-align: center;
-    inset: 85% 34.5% 15%;
+    bottom: 5%
 }
 
 /* Topic - Emotional Health */
 #emotional-health {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     text-align: center;
     background-color: var(--main-color1);
     margin: 5em;
@@ -1186,7 +1173,6 @@ input[type="radio"][id="10"]:checked {
 }
 
 #emotional-health .image-container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1559,8 +1545,27 @@ VIEWPORTS
     .desktop {
         display: none;
     }
+
+    .tablet-mobile {
+        display: unset;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Header */
     header {
         width: 100vw;
+        padding: 0 3em 0 5em;
+    }
+
+    /* Footer */
+    #footer-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #footer-get-to-know {
+        grid-column: 2;
     }
     /* ========================================= */
     /* Welcome Page */
@@ -1625,13 +1630,85 @@ VIEWPORTS
         height: 120%;
         bottom: -15%;
     }
+
+    /* ========================================= */
+    /* About Page */
+    #about-portrait {
+        height: 425px;
+        margin: 5em 1em 5em 5em;
+    }
+
+    #about-portrait .decor-text {
+        font-size: 6em;
+    }
+
+    #about #intro-message {
+        padding: 0 5em 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #dev-info p{
+        padding: 0 5em 3em;
+        width: 100%;
+        text-align: center;
+    }
+
+    #dev-info hr {
+        display: none;
+    }
+
+    #quote {
+        clear: both;
+        width: 100%;
+        margin: 0 0 1.5em;
+    }
+
+    #about > .more-to-explore {
+        padding-top: 3em;
+    }
+
+    #site-mission {
+        padding: 1em 0 0;
+    }
+
+    /* ========================================= */
+    /* Topics Page */
+    #emotional-health {
+        display: flex;
+        min-height: 10em;
+    }
+
+    #emotional-health .image-container {
+        position: absolute;
+        opacity: 50%;
+    }
 }
 
 /* ====================================================================== */
 /* MEDIA QUERY FOR DESKTOP VIEWPORT */
 @media screen and (min-width: 1015px), print {
+    .tablet-mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: unset;
+    }
     header {
         width: 100vw;
+        padding: 0 1em 0 2em;
+    }
+
+    /* Footer */
+    #footer-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #footer-get-to-know {
+        grid-column: 3;
     }
 
     .wrapper {
@@ -1699,4 +1776,43 @@ VIEWPORTS
         bottom: -10%;
     }
 
+    /* ========================================= */
+    /* About Page */
+    #about-portrait {
+        margin: 5em;
+        height: 550px;
+    }
+
+    #about-portrait .decor-text {
+        font-size: 7.5em;
+    }
+
+    #about #intro-message {
+        margin: 6em 0;
+    }
+
+    #quote {
+        float: right;
+        width: 345px;
+    }
+
+    #about > .more-to-explore {
+        padding-top: 7em;
+    }
+
+    #site-mission {
+        padding: 1em 3em 3em 2em;
+    }
+
+    /* ========================================= */
+    /* Topics Page */
+    #emotional-health {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #emotional-health .image-container {
+        position: relative;
+        opacity: 100%;
+    }
 }

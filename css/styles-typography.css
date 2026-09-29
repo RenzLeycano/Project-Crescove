@@ -59,6 +59,8 @@ hr {
 }
 
 .highlight {
+    display: inline;
+    font-weight: bold;
     background-color: var(--accent-color);
 }
 
