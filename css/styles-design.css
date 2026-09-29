@@ -270,7 +270,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 }
 
 .decor-text::after {
-    z-index: 3;
+    z-index: 10;
     position: absolute;
     inset: 0;
     -webkit-text-stroke-width: 2px;
@@ -1187,8 +1187,6 @@ input[type="radio"][id="10"]:checked {
 
 #spec-topics-shortcuts > a > .explore-background {
     display: flex;
-    height: 400px;
-    justify-content: space-between;
 }
 
 #spec-topics-shortcuts > a > .explore-background > .explore-content {
@@ -1203,7 +1201,6 @@ input[type="radio"][id="10"]:checked {
 #spec-topics-shortcuts > a > .explore-background > .explore-info p{
     line-height: normal;
     color: var(--neutral3);
-    padding: 1em;
 }
 
 /* Interaction with Topics */
@@ -1608,7 +1605,7 @@ VIEWPORTS
     .explore-content {
         width: 100%;
     }
-    .explore-content * {
+    #activity > .explore-content * {
         z-index: 2;
     }
     #activity > img {
@@ -1684,6 +1681,22 @@ VIEWPORTS
     #emotional-health .image-container {
         position: absolute;
         opacity: 50%;
+    }
+
+    #spec-topics-shortcuts > a > .explore-background > .explore-content {
+        max-height: 200px;
+    }
+
+    #spec-topics-shortcuts > a > .explore-background > .explore-content > .decor-text {
+        font-size: 2em;
+    }
+    
+    #spec-topics-shortcuts > a > .explore-background {
+        height: 280px;
+    }
+
+    #spec-topics-shortcuts > a > .explore-background > .explore-info p{
+        padding: 0.5em;
     }
 }
 
@@ -1814,5 +1827,22 @@ VIEWPORTS
     #emotional-health .image-container {
         position: relative;
         opacity: 100%;
+    }
+
+    #spec-topics-shortcuts > a > .explore-background > .explore-content {
+        max-height: 300px;
+    }
+
+    #spec-topics-shortcuts > a > .explore-background > .explore-content > .decor-text {
+        font-size: 2.5em;
+    }
+
+    #spec-topics-shortcuts > a > .explore-background {
+        height: 400px;
+        justify-content: space-between;
+    }
+
+    #spec-topics-shortcuts > a > .explore-background > .explore-info p{
+        padding: 1em;
     }
 }
