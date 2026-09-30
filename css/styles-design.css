@@ -250,6 +250,10 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     text-align: center;
 }
 
+.portrait {
+    height: 100%;
+}
+
 .decor-image {
     position: absolute;
     bottom: 0;
@@ -350,7 +354,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #Welcome-grid {
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+    height: 80vh;
 }
 
 #crescove-bg-video {
@@ -426,11 +430,11 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 }
 
 #you .decor-text::after {
-    content: "HOW'RE\aYOU?";
+    content: "HOW'RE YOU?";
 }
 
 #loved .decor-text::after {
-    content: "YOU'RE\aLOVED";
+    content: "YOU'RE LOVED";
 }
 
 #true, #you, #loved {
@@ -451,8 +455,9 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 }
 
 #true img, #you img, #loved img {
-    top: -10%;
-    width: 90%;
+    top: 0;
+    height: 100%;
+    width: auto;
     object-fit: cover;
 }
 /* ====================================================================== */
@@ -480,15 +485,13 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     top: 0;
     max-width: 517px;
     height: auto;
-    z-index: -1;
+    z-index: -2;
     filter: blur(1px);
 }
 
 #intro-message {
     position: relative;
     top: 0;
-    background-color: white;
-    z-index: -2;
 }
 
 #home #intro-message > h1, #home #intro-message > p {
@@ -579,6 +582,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     position: absolute;
     top: 10%;
     left: 10%;
+    text-align: left;
 }
 
 #topic-shortcut > .decor-text::after {
@@ -1029,7 +1033,6 @@ input[type="radio"][id="10"]:checked {
 #about #intro-message {
     position: relative;
     text-align: center;
-    margin: 3em 0;
 }
 
 #about-portrait {
@@ -1567,19 +1570,19 @@ VIEWPORTS
     /* ========================================= */
     /* Welcome Page */
     .welcome {
-        height: 75vh;
+        height: 70%;
     }
     
     .decor-portraits {
-        height: 20vh;
+        height: 30%;
     }
 
     .decor-portraits .decor-text {
-        font-size: 3.5em;
+        font-size: 4cqw;
     }
     .decor-text.phrase2 {
-        font-size: 4em;
-        top: 50%;
+        font-size: 5cqw;
+        top: 25%;
     }
 
     /* ========================================= */
@@ -1619,7 +1622,7 @@ VIEWPORTS
 
     /* Topics */
     #topic-shortcut > .decor-image {
-        right: -20%;
+        left: -30%;
     }
 
     /* About Shortcut*/
@@ -1636,7 +1639,7 @@ VIEWPORTS
     }
 
     #about-portrait .decor-text {
-        font-size: 6em;
+        font-size: 8cqw;
     }
 
     #about #intro-message {
@@ -1730,19 +1733,19 @@ VIEWPORTS
     /* ========================================= */
     /* Welcome Page */
     .welcome {
-        height: 50vh;
+        height: 60%;
     }
     
     .decor-portraits {
-        height: 40vh;
+        height: 40%;
     }
 
     .decor-portraits .decor-text {
-        font-size: 4.5em;
+        font-size: 4cqw;
     }
     .decor-text.phrase2 {
-        font-size: 6em;
-        top: 35%;
+        font-size: 6cqw;
+        top: 30%;
     }
 
     /* ========================================= */
@@ -1752,7 +1755,7 @@ VIEWPORTS
     }
 
     #home > .background-image {
-        opacity: 75%;
+        opacity: 50%;
         left: 7em;
     }
 
@@ -1770,8 +1773,8 @@ VIEWPORTS
     }
 
     #activity > img {
-        z-index: 1;
-        opacity: 100%;
+        z-index: 0;
+        opacity: 80%;
     }
 
     #home .more-to-explore .wrapper {
@@ -1780,7 +1783,7 @@ VIEWPORTS
 
     /* Topics Shortcut */
     #topic-shortcut > .decor-image {
-        right: -10%;
+        left: -15%;
     }
 
     /* About Shortcut*/
@@ -1792,16 +1795,17 @@ VIEWPORTS
     /* ========================================= */
     /* About Page */
     #about-portrait {
-        margin: 5em;
+        margin: 5em 0 5em 5em;
         height: 550px;
+        width: 350px;
     }
 
     #about-portrait .decor-text {
-        font-size: 7.5em;
+        font-size: 6cqw;
     }
 
     #about #intro-message {
-        margin: 6em 0;
+        margin: 3em 0 0;
     }
 
     #quote {
