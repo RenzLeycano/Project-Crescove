@@ -642,7 +642,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     background-color: var(--bg-accent);
     position: absolute;
     width: 100vw;
-    height: 30vh;
     display: flex;
     justify-content: center;
     z-index: -1;
@@ -655,7 +654,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #mood-activity {
     z-index: 1;
     height: auto;
-    padding: 6em 20% 2em;
     width: 100%;
 }
 
@@ -999,8 +997,6 @@ input[type="radio"][id="10"]:checked {
     font-style: italic;
 }
 
-/* Envelope Animation */
-
 @keyframes unveil {
     60% {
         bottom: 20%;
@@ -1024,7 +1020,6 @@ input[type="radio"][id="10"]:checked {
         right: 50%;
     }
 }
-
 /* ====================================================================== */
 /* About Page styles */
 #about > .wrapper {
@@ -1726,6 +1721,27 @@ VIEWPORTS
     .contact-background {
         top: -13%;
     }
+
+    /* ========================================= */
+    /* Activity Page */
+    #background-design {
+        height: 20vh;
+    }
+
+    #mood-activity {
+        padding: 6.5vh 5% 2em;
+    }
+
+    /* Envelope Animation */
+
+    @keyframes unveil {
+        60% {
+            bottom: 30%;
+        }
+        100% {
+            bottom: 15%;
+        }
+    }
 }
 
 /* ====================================================================== */
@@ -1895,5 +1911,27 @@ VIEWPORTS
 
     .contact-background {
         top: unset;
+    }
+
+    /* ========================================= */
+    /* Activity Page */
+    #background-design {
+        height: 30vh;
+    }
+
+    #mood-activity {
+        padding: 12.6vh 20% 2em;
+    }
+
+    /* Envelope Animation */
+
+    @keyframes unveil {
+        60% {
+            bottom: 20%;
+        }
+        100% {
+            bottom: 0;
+            z-index: 10;
+        }
     }
 }
