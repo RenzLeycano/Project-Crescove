@@ -29,13 +29,30 @@ const moodColor = document.getElementById('mood-color');
 const adviceResult = document.getElementById('advice-details');
 const moodTitle = document.getElementById('mood-info');
 
+    // Quick Advice
+const quickAdviceHeader = document.getElementById('quick-advice-header');
+const moodDetail = document.getElementById('mood-detail');
 
-
-activity.addEventListener('submit', function(event){
+function displayResult(event) {
     event.preventDefault();
 
-    let mood = document.getElementById('mood').value;
-    let intensity = document.querySelector('input[name="intensity"]:checked').value;
+    const params = new URLSearchParams(window.location.search);
+    const isQuickAdvice = params.get('quickAdvice') === 'true';
+
+    let mood;
+    let intensity;
+
+    if (isQuickAdvice) {
+        mood = Math.floor(Math.random() * 10 + 1);
+        intensity = Math.floor(Math.random() * 10 + 1);
+        quickAdviceHeader.classList.add('show-quick-advice-header');
+        moodColor.classList.add('hide-mood-detail');
+        moodDetail.classList.add('hide-mood-detail');
+    } else {
+        mood = document.getElementById('mood').value;
+        intensity = document.querySelector('input[name="intensity"]:checked').value;
+        results.classList.add('show-results-drop');
+    }
 
     activity.classList.add('hide-activity');
     results.classList.add('show-results');
@@ -187,5 +204,22 @@ activity.addEventListener('submit', function(event){
             adviceResult.textContent = bored[index];
             break;
     }
-})
+};
 
+activity.addEventListener('submit', displayResult);
+
+
+const quickAdvice = document.getElementById('quick-advice')
+
+if(quickAdvice) {
+    quickAdvice.addEventListener('click', function () { 
+        window.location.href = 'activity.html?quickAdvice=true';
+    });
+}
+
+const params = new URLSearchParams(window.location.search);
+
+if (params.get('quickAdvice') === 'true') {
+    displayResult(new Event('quickAdvice'));
+}
+    

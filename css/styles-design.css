@@ -557,6 +557,11 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     border-radius: 30px;
 }
 
+.activity-buttons {
+    display: flex;
+    gap: 1em;
+}
+
 /* Topics */
 .shortcut-link {
     position: absolute;
@@ -813,12 +818,15 @@ input[type="radio"][id="10"]:checked {
     align-items: end;
     background-color: var(--neutral1);
     z-index: 100;
-    transition: top 0.5s;
 }
 
 .show-results {
     display: flex;  
     top: 0;
+}
+
+.show-results-drop {
+    transition: top 0.5s;
 }
 
 .unveil {
@@ -942,13 +950,31 @@ input[type="radio"][id="10"]:checked {
     box-shadow: 0 0 10px var(--shadow);
 }
 
-.mood-detail {
+#mood-detail {
     display: flex;
+    align-items: center;
+    justify-content: center;
     align-items: center;
     padding: 0 2em;
     height: 50px;
     width: 80%;
 }
+/* Quick Advice */
+#quick-advice-header {
+    display: none;
+    font-size: 1.75em;
+    text-align: center;
+    width: 100%;
+}
+
+.show-quick-advice-header {
+    display: unset !important;
+}
+
+.hide-mood-detail {
+    display: none !important;
+}
+
 /* Result Info */
 .result-info {
     position: absolute;
@@ -981,13 +1007,7 @@ input[type="radio"][id="10"]:checked {
     font-size: 1.5em;
     text-align: center;
     font-style: italic;
-    font-weight: 700;
-}
-
-#mood-detail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-weight: 500;
 }
 
 #mood-info {
