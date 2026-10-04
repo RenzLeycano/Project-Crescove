@@ -632,6 +632,8 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 #activity > a > .back-button {
     top: 3em;
@@ -804,23 +806,29 @@ input[type="radio"][id="10"]:checked {
 /* ====================================================================== */
 /* Activity Results styles */
 .results {
-    position: relative;
+    position: fixed;
     min-height: 100vh;
+    top: -120%;
     width: 100%;
     overflow-y: hidden;
-    display: none;
     justify-content: center;
     align-items: end;
     background-color: var(--neutral1);
     z-index: 100;
+    transition: top 0.5s;
 }
 
 .show-results {
     display: flex;  
+    top: 0;
+}
+
+.unveil {
+    animation: unveil 1.5s ease-in-out 0.45s 1 normal forwards;
 }
 
 .hide-activity {
-    display: none !important;
+    opacity: 0;
 }
 /* Envelope decor */
 .envelope, .envelope-background {
@@ -828,8 +836,8 @@ input[type="radio"][id="10"]:checked {
     display: flex;
     justify-content: center;
     align-items: end;
-    bottom: -29%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    transform: translate(-50%, 0);
     left: 50%;
     right: 50%;
     width: 700px;
@@ -910,7 +918,6 @@ input[type="radio"][id="10"]:checked {
     box-shadow: 0 4px 8.2px 6px var(--shadow);
     align-items: center;
     justify-content: end;
-    animation: unveil 1.5s ease-in-out 0ms 1 normal forwards;
 }
 
 #advice-info {
@@ -1002,7 +1009,6 @@ input[type="radio"][id="10"]:checked {
         right: 50%;
     }
     80% {
-        z-index: 10;
         transform: scale(1.05);
         transform: translate(-50%, -50%);
         left: 50%;
@@ -1180,12 +1186,12 @@ input[type="radio"][id="10"]:checked {
     align-items: center;
     justify-content: center;
     top: -25%;
-    width: auto;
+    width: 100%;
     height: 150%;
 }
 
 #emotional-health .image-container .topic-image {
-    transform: scale(1);
+    transform: scale(1.25);
 }
 
 #spec-topics-shortcuts > a > .explore-background {
@@ -1208,10 +1214,9 @@ input[type="radio"][id="10"]:checked {
 
 /* Interaction with Topics */
 .topic-image {
+    position: relative;
     width: 80%;
     height: auto;
-    top: -8%;
-    left: 10%;
     object-fit: cover;
     opacity: 0.7;
     transform: scale(0.95 );
@@ -1290,10 +1295,6 @@ input[type="radio"][id="10"]:checked {
 /* ====================================================================== */
 /* Contacts Page styles */
 
-#contact {
-    display: grid;
-    grid-template-columns: 1.1fr 3fr;
-}
 
 /* Hotline Styles */
 #hotlines {
@@ -1308,7 +1309,8 @@ input[type="radio"][id="10"]:checked {
     box-shadow: 0 4px 4px var(--shadow);
     padding: 7%;
     color: var(--neutral1);
-}
+    width: max-content;
+} 
 
 .contact-header, .contact-subheader {
     color: var(--accent-color);
@@ -1366,7 +1368,6 @@ input[type="radio"][id="10"]:checked {
 
 #feedback {
     float: right;
-    width: 85%;
 }
 
 #feedback .title{
@@ -1635,6 +1636,7 @@ VIEWPORTS
     /* About Page */
     #about-portrait {
         height: 425px;
+        width: 600px;
         margin: 5em 1em 5em 5em;
     }
 
@@ -1700,6 +1702,29 @@ VIEWPORTS
 
     #spec-topics-shortcuts > a > .explore-background > .explore-info p{
         padding: 0.5em;
+    }
+
+    /* ========================================= */
+    /* Contacts Page */
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #feedback-background {
+        order: 1;
+    }
+
+    #contact-info-background {
+        order: 2;
+    }
+
+    #feedback {
+        width: 100%;
+    }
+
+    .contact-background {
+        top: -13%;
     }
 }
 
@@ -1797,7 +1822,7 @@ VIEWPORTS
     #about-portrait {
         margin: 5em 0 5em 5em;
         height: 550px;
-        width: 350px;
+        width: 400px;
     }
 
     #about-portrait .decor-text {
@@ -1825,7 +1850,7 @@ VIEWPORTS
     /* Topics Page */
     #emotional-health {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1.5fr;
     }
 
     #emotional-health .image-container {
@@ -1848,5 +1873,27 @@ VIEWPORTS
 
     #spec-topics-shortcuts > a > .explore-background > .explore-info p{
         padding: 1em;
+    }
+
+    /* ========================================= */
+    /* Contacts Page */
+    #contact {
+        grid-template-columns: 1.1fr 3fr;
+    }
+
+    #feedback {
+        width: 85%;
+    }
+
+    #feedback-background {
+        order: 2;
+    }
+
+    #contact-info-background {
+        order: 1;
+    }
+
+    .contact-background {
+        top: unset;
     }
 }

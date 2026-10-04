@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Display Results and Hide Activity
 const activity = document.getElementById('activity');
 const results = document.getElementById('result-display');
+const letter = document.getElementById('advice');
 
 const moodColor = document.getElementById('mood-color');
 const adviceResult = document.getElementById('advice-details');
@@ -38,6 +39,7 @@ activity.addEventListener('submit', function(event){
 
     activity.classList.add('hide-activity');
     results.classList.add('show-results');
+    letter.classList.add('unveil');
 
 // Display Results based on Activity
     const baseVal = 0;
