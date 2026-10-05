@@ -12,15 +12,18 @@ body {
     min-height: 100vh;
 }
 
-header, footer {
+header {
     z-index: 100;
+}
+
+footer {
+    z-index: 99;
 }
 
 /* Header Styles */
 header {
     position: sticky;
-    height: 80px;
-    width: 100%;
+    width: 100vw;
     background-color: var(--main-color4);
     display: flex;
     align-items: center;
@@ -29,15 +32,11 @@ header {
 }
 
 header a img {
-    height: 65.84px;
-    width: 117.1px;
     vertical-align: middle;
 }
 
 /* Navbar Styles */
 #nav-bar li{
-    display: inline-flex;
-    padding: 0 2em;
     color: var(--neutral1);
     font-weight: bold;
     position: relative;
@@ -360,19 +359,16 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #crescove-bg-video {
     position: fixed;
     z-index: -10;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
-    right: 0;
+    left: 0;
     object-fit: cover;
     transform: scaleX(-1);
-    right: 0;
     filter: brightness(40%);
 }
 
 #Welcome-logo {
     object-fit: cover;
-    width: 366px;
-    height: 150px;
 }
 
 .welcome {
@@ -382,7 +378,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     flex-direction: column;
     align-items: center;
     gap: 2em;
-    padding: 5em;
     box-shadow: inset 0 -10px 30px 10px var(--shadow);
 }
 
@@ -1562,28 +1557,159 @@ VIEWPORTS
 ======================================================================================================================================== */
 
 /* ====================================================================== */
-/* MEDIA QUERY FOR TABLET VIEWPORT */
-@media screen and (min-width: 630px), print {
+/* MEDIA QUERY FOR MOBILE VIEWPORT */
+@media screen and (min-width: 320px) {
+    .mobile {
+        display: unset;
+    }
     /* Hide desktop class */
+    .tablet-desktop {
+        display: none;
+    }
+
     .desktop {
         display: none;
+    }
+
+    /* Header */
+    header {
+        padding: relative;
+        padding: 0 1em 0 1.5em;
+        height: 60px;
+    }
+
+    header a img {
+        height: 45.84px;
+        width: 82.1px;
+    }
+
+    #nav-bar {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        background: linear-gradient(
+            90deg,
+            var(--bg-accent2),
+            transparent 50%
+        );
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: -120%;
+        padding: 5em 1em 5em 2em;
+        gap: 1em;
+        transition: left 0.3s;
+    }
+
+    #nav-icon {
+        display: flex;
+        align-items: center;
+        z-index: 101;
+    }
+
+    #hamburger {
+        width: 30px;
+        height: 30px;
+        animation: spin-in 0.1s;
+    }
+
+    #close {
+        width: 25px;
+        height: 25px;
+        padding-right: 5px;
+        animation: spin-in 0.1s;
+    }
+
+    #nav-bar li {
+        display: block;
+        font-size: 1em;
+        padding: 0 1em;
+    }
+
+    .display-nav {
+        position: sticky;
+        left: 0 !important;
+        top: 0;
+    }
+
+    @keyframes spin-in {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+    /* Landing Main */
+    #Welcome-logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .welcome {
+        padding: 2.5em;
+        box-shadow: unset;
+    }
+    /* Footer */
+    #footer-details {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* MEDIA QUERY FOR TABLET VIEWPORT */
+@media screen and (min-width: 630px), print {
+    .mobile {
+        display: none !important;
     }
 
     .tablet-mobile {
         display: unset;
     }
 
+    .tablet-desktop {
+        display: flex;
+    }
+
     .wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
+    
     /* Header */
     header {
-        width: 100vw;
-        padding: 0 3em 0 5em;
+        height: 80px;
+        padding-left: 3em;
+    }
+
+    header a img {
+        height: 65.84px;
+        width: 117.1px;
+    }
+
+    /* Navbar */
+    #nav-bar {
+        position: unset;
+        background: unset;
+        flex-direction: row;
+        width: unset;
+        left: unset;
+        height: unset;
+    }
+
+    #nav-bar li {
+        display: inline-flex;
+        font-size: 1em;
+        padding: 0 1.5em;
     }
 
     /* Footer */
     #footer-details {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1594,10 +1720,17 @@ VIEWPORTS
     /* Welcome Page */
     .welcome {
         height: 70%;
+        padding: 5em;
     }
     
     .decor-portraits {
         height: 30%;
+    }
+
+    /* Landing Main */
+    #Welcome-logo {
+        width: 366px;
+        height: 150px;
     }
 
     .decor-portraits .decor-text {
@@ -1781,6 +1914,7 @@ VIEWPORTS
     .desktop {
         display: unset;
     }
+    /* Header */
     header {
         width: 100vw;
         padding: 0 1em 0 2em;

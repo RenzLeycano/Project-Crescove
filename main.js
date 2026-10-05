@@ -19,6 +19,29 @@ window.addEventListener('DOMContentLoaded', () => {
     video.src = videoSources[index];
     video.load();
 });
+// Display Nav Menu (mobile only)
+const navMenu = document.getElementById('nav-bar');
+const hamburgerIcon = document.getElementById('hamburger');
+const closeIcon = document.getElementById('close');
+
+if(hamburgerIcon) {
+    hamburgerIcon.addEventListener('click', ()=> {
+        navMenu.classList.add('display-nav');
+        hamburgerIcon.classList.add('hide');
+        closeIcon.classList.remove('hide');
+    });
+}
+
+if(closeIcon || navMenu) {
+    closeIcon.addEventListener('click', hideMenu);
+    navMenu.addEventListener('click', hideMenu);
+}
+
+function hideMenu() {
+        navMenu.classList.remove('display-nav');
+        hamburgerIcon.classList.remove('hide');
+        closeIcon.classList.add('hide');
+}
 
 // Display Results and Hide Activity
 const activity = document.getElementById('activity');
