@@ -48,14 +48,6 @@ header a img {
     color: var(--accent-color);
 }
 
-#nav-highlight::before, #nav-highlight::after {
-    content: "|";
-    position: absolute;
-    font-weight: bold;
-    color: var(--accent-color);
-    opacity: 0.5;
-}
-
 #nav-highlight::before {
     right: 80%;
 }
@@ -250,7 +242,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     font-family: Verdana, Geneva, Tahoma, sans-serif sans-serif;
     text-align: center;
     width: 100%;
-    font-size: 3.5em;
     font-weight: 900;
     line-height: normal;
     color: var(--neutral1);
@@ -532,10 +523,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     flex-direction: column;
     align-items: start;
 }
- 
-#topic-shortcut > .decor-image {
-    height: 100%;
-}
 
 #topic-shortcut > .decor-text {
     position: absolute;
@@ -566,12 +553,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #about-shortcut {
     background-color: var(--accent-color);
     align-items: center;
-}
-
-#about-shortcut > .decor-image {
-    position: absolute;
-    width: auto;
-    z-index: 2;
 }
 
 #about-shortcut > .decor-text {
@@ -1534,10 +1515,34 @@ VIEWPORTS
         display: none;
     }
 
-    p {
-        font-size: 0.9em;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
     }
 
+    /* Typography */
+    p, a {
+        font-size: 0.9em;
+    }
+    
+    .title {
+        font-size: 1.5em;
+        padding: 0.25em;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.3em;
+        padding: 0.25em;
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    .decor-text {
+        font-size: 2.5em;
+    }
+
+    /* Buttons */
     input[type="submit"], .button1, .button2 {
         width: 100%;
         height: 30px;
@@ -1583,6 +1588,9 @@ VIEWPORTS
         z-index: 101;
     }
 
+    #nav-highlight::before, #nav-highlight::after {
+        display: none;
+    }
     #hamburger {
         width: 30px;
         height: 30px;
@@ -1720,7 +1728,7 @@ VIEWPORTS
     }
 
     .explore-background.home {
-        height: 426.34px;
+        height: 360px;
     }
 
     /* Activity */
@@ -1753,6 +1761,26 @@ VIEWPORTS
     .activity-buttons div {
         margin: 0;
     }
+
+    /* Topics */
+
+    #topic-shortcut > .decor-image {
+        height: 100%;
+        left: -75%;
+    }
+
+    /* About */
+    #about-shortcut {
+        height: 200px;
+    }
+
+    #about-shortcut > .decor-image {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        bottom: -10%;
+        z-index: 2;
+    }
 }
 
 /* MEDIA QUERY FOR TABLET VIEWPORT */
@@ -1777,8 +1805,21 @@ VIEWPORTS
         display: flex;
     }
 
-    p {
+    /* Typography */
+    p, a {
         font-size: 1em;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .decor-text {
+        font-size: 3.5em;
     }
 
     input[type="submit"], .button1, .button2 {
@@ -1813,6 +1854,14 @@ VIEWPORTS
         display: inline-flex;
         font-size: 1em;
         padding: 0 1.5em;
+    }
+
+    #nav-highlight::before, #nav-highlight::after {
+        content: "|";
+        position: absolute;
+        font-weight: bold;
+        color: var(--accent-color);
+        opacity: 0.5;
     }
 
     /* Footer */
@@ -1931,7 +1980,7 @@ VIEWPORTS
         flex-direction: column;
     }
 
-    .explore-background.home {
+    .explore-background.home, #about-shortcut {
         height: 426.34px;
     }
 
