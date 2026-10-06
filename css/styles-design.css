@@ -491,7 +491,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 
 /* Activity */
 .explore-background#activity {
-    margin-bottom: 2em;
+    grid-column: 1 / -1;
 }
 
 #activity > .explore-content {
@@ -979,11 +979,7 @@ input[type="radio"][id="10"]:checked {
 /* About Page styles */
 #about > .wrapper {
     position: relative;
-    display: flex;
-    grid-template-columns: repeat(2, 1fr);
     align-items: top;
-    justify-content: center;
-    height: 580px;
 }
 
 #about #intro-message {
@@ -1006,9 +1002,7 @@ input[type="radio"][id="10"]:checked {
 }
 
 #about-portrait .decor-text {
-    bottom: 5%;
     width: 100%;
-    font-size: 7.5em;
     line-height: 80%;
 }
 
@@ -1518,6 +1512,8 @@ VIEWPORTS
     .wrapper {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Typography */
@@ -1532,7 +1528,7 @@ VIEWPORTS
     }
 
     .subtitle {
-        font-size: 1.3em;
+        font-size: 1.05em;
         padding: 0.25em;
         font-weight: normal;
         font-style: italic;
@@ -1707,7 +1703,7 @@ VIEWPORTS
 
     #intro-message {
         width: 100%;
-        padding: 2em;
+        padding: 0;
     }
 
     #home > .background-image {
@@ -1781,6 +1777,42 @@ VIEWPORTS
         bottom: -10%;
         z-index: 2;
     }
+
+    /* ========================================= */
+    /* About Page */
+    #about > .wrapper {
+        padding: 2em;
+        justify-content: start;
+        height: auto;
+    }
+
+    #about-portrait {
+        height: 183px;
+        width: 100%;
+    }
+
+    #about-portrait .decor-text {
+        bottom: 10%;
+        font-size: 12cqw;
+    }
+
+    #dev-info p{
+        padding: 0 2em 2em;
+        width: 100%;
+        text-align: center;
+    }
+
+    #about > .more-to-explore {
+        padding-top: 2em;
+    }
+
+    /* Blockquote */
+    #quote {
+        font-size: 0.9em;
+        padding: 1.25em;
+        background-color: var(--main-color1);
+        margin: 0 0 2em;
+    }
 }
 
 /* MEDIA QUERY FOR TABLET VIEWPORT */
@@ -1798,6 +1830,7 @@ VIEWPORTS
     }
 
     .wrapper {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -2007,13 +2040,25 @@ VIEWPORTS
 
     /* ========================================= */
     /* About Page */
+    #about .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #about > .wrapper {
+        padding: 0;
+        justify-content: center;
+        height: 580px;
+    }
+
     #about-portrait {
         height: 425px;
-        width: 600px;
+        width: 300px;
         margin: 5em 1em 5em 5em;
     }
 
     #about-portrait .decor-text {
+        bottom: 5%;
         font-size: 8cqw;
     }
 
@@ -2038,6 +2083,7 @@ VIEWPORTS
     #quote {
         clear: both;
         width: 100%;
+        font-size: 1.5em;
         margin: 0 0 1.5em;
     }
 
@@ -2180,7 +2226,7 @@ VIEWPORTS
     }
 
     #intro-message {
-        width: 50%;
+        width: 100%;
         padding: 3em;
     }
 
@@ -2224,9 +2270,9 @@ VIEWPORTS
         font-size: 6cqw;
     }
 
-    #about #intro-message {
+    /* #about #intro-message {
         margin: 3em 0 0;
-    }
+    } */
 
     #quote {
         float: right;
