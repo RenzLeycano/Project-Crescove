@@ -273,43 +273,49 @@ if (params.get('quickAdvice') === 'true') {
 
 // Anecdotes
 
-
 const anecdoteForm = document.getElementById("anecdote-form");
+
 if (anecdoteForm) {
-anecdoteForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+    anecdoteForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    // Get the user's input
-    const usernameInput = document.getElementById("username").value.trim();
-    const messageInput = document.getElementById("message").value.trim();
+        const username = document.getElementById("username").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    // Use Anonymous if no name was provided
-    const username = usernameInput || "Anonymous";
+        if (!message) {
+            alert("Please enter an anecdote.");
+            return;
+        }
 
-    // Prevent empty submissions
-    if (!messageInput) {
-        alert("Please enter an anecdote before submitting.");
-        return;
-    }
+        try {
+            const response = await fetch(
+                "http://localhost:3000/api/anecdotes",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        username,
+                        message
+                    })
+                }
+            );
 
-    // Create the anecdote object
-    const anecdote = {
-        username: username,
-        message: messageInput,
-        date: new Date().toLocaleDateString()
-    };
+            const result = await response.json();
 
-    // Retrieve existing anecdotes
-    const anecdotes =
-        JSON.parse(localStorage.getItem("anecdotes")) || [];
+            if (!response.ok) {
+                throw new Error(result.error || "Submission failed.");
+            }
 
-    // Add the new anecdote
-    anecdotes.push(anecdote);
+            alert("Your anecdote has been submitted!");
+            anecdoteForm.reset();
 
-    // Save anecdotes to local storage
-    localStorage.setItem("anecdotes", JSON.stringify(anecdotes));
-
-    // Redirect to the anecdotes page
-    window.location.href = "Crescove-Anecdotes.html";
-});
+            window.location.href = "Crescove-Anecdotes.html";
+        } catch (error) {
+            console.error("Error submitting anecdote:", error);
+            alert("Unable to submit your anecdote. Please check if the backend is running.");
+        }
+    });
 }
+
