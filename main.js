@@ -19,6 +19,45 @@ window.addEventListener('DOMContentLoaded', () => {
     video.src = videoSources[index];
     video.load();
 });
+
+// Hero Image Slideshow
+
+let slideIndex = 0;
+showSlides();
+
+
+
+
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("hero-image-slideshow");
+
+  // Gives the container a background color
+//   let heroBGColor = document.getElementById("hero-image-container");
+//   let heroColorContainer = [
+//     "url('Img/Crescove Hero Image - Anger.png')",
+//     "url('Img/Crescove Hero Image - Letting Go.png')",
+//     "url('Img/Crescove Hero Image - Depression.png')",
+//     "url('Img/Crescove Hero Image - Overthinking.png')",
+//     "url('Img/Crescove Hero Image - Pressure.png')",
+//     "url('Img/Crescove Hero Image - Stress.png')",
+//     "url('Img/Crescove Hero Image.png')"
+//     ]
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+  slides[slideIndex-1].style.display = "flex";
+//   heroBGColor.style.background = heroColorContainer[slideIndex - 1];
+//   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
 // Display Nav Menu (mobile only)
 const navMenu = document.getElementById('nav-bar');
 const hamburgerIcon = document.getElementById('hamburger');
@@ -245,4 +284,3 @@ const params = new URLSearchParams(window.location.search);
 if (params.get('quickAdvice') === 'true') {
     displayResult(new Event('quickAdvice'));
 }
-    
