@@ -1749,18 +1749,23 @@ VIEWPORTS
         position: relative;
         height: 300px;
     }
-
+    .hero-image.home {
+        object-fit: cover;
+        overflow: hidden;
+    }
     .hero-image.home img {
         position: relative;
         height: 100%;
-        object-position: right;
+        object-position: 96%;
         opacity: 0.5;
     }
 
     #home-header {
-        top: 30%;
-        left: 32px;
+        top: 10%;
+        width: 100%;
+        margin: 0 auto;
         font-size: 2em;
+        text-align: center;
     }
     
     .home.hero-image p {
@@ -2270,7 +2275,9 @@ VIEWPORTS
     #home-header {
         top: 20%;
         left: 80px;
+        width: unset;
         font-size: 4em;
+        text-align: left;
     }
 
     #home > .background-image {

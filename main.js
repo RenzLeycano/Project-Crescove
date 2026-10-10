@@ -25,38 +25,21 @@ window.addEventListener('DOMContentLoaded', () => {
 let slideIndex = 0;
 showSlides();
 
-
-
-
-
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("hero-image-slideshow");
 
-  // Gives the container a background color
-//   let heroBGColor = document.getElementById("hero-image-container");
-//   let heroColorContainer = [
-//     "url('Img/Crescove Hero Image - Anger.png')",
-//     "url('Img/Crescove Hero Image - Letting Go.png')",
-//     "url('Img/Crescove Hero Image - Depression.png')",
-//     "url('Img/Crescove Hero Image - Overthinking.png')",
-//     "url('Img/Crescove Hero Image - Pressure.png')",
-//     "url('Img/Crescove Hero Image - Stress.png')",
-//     "url('Img/Crescove Hero Image.png')"
-//     ]
-  for (i = 0; i < slides.length; i++) {
+  if(slides.length > 0) {
+    for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "flex";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-  slides[slideIndex-1].style.display = "flex";
-//   heroBGColor.style.background = heroColorContainer[slideIndex - 1];
-//   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
+
 
 // Display Nav Menu (mobile only)
 const navMenu = document.getElementById('nav-bar');
