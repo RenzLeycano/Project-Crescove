@@ -37,7 +37,7 @@ function showSlides() {
     if (slideIndex > slides.length) {slideIndex = 1}    
     slides[slideIndex-1].style.display = "flex";
   }
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  setTimeout(showSlides, 10000); // Change image every 5 seconds
 }
 
 
@@ -268,54 +268,5 @@ const params = new URLSearchParams(window.location.search);
 
 if (params.get('quickAdvice') === 'true') {
     displayResult(new Event('quickAdvice'));
-}
-
-
-// Anecdotes
-
-const anecdoteForm = document.getElementById("anecdote-form");
-
-if (anecdoteForm) {
-    anecdoteForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const username = document.getElementById("username").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        if (!message) {
-            alert("Please enter an anecdote.");
-            return;
-        }
-
-        try {
-            const response = await fetch(
-                "http://localhost:3000/api/anecdotes",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        username,
-                        message
-                    })
-                }
-            );
-
-            const result = await response.json();
-
-            if (!response.ok) {
-                throw new Error(result.error || "Submission failed.");
-            }
-
-            alert("Your anecdote has been submitted!");
-            anecdoteForm.reset();
-
-            window.location.href = "Crescove-Anecdotes.html";
-        } catch (error) {
-            console.error("Error submitting anecdote:", error);
-            alert("Unable to submit your anecdote. Please check if the backend is running.");
-        }
-    });
 }
 
