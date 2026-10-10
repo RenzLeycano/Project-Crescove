@@ -251,7 +251,9 @@ function displayResult(event) {
     }
 };
 
-activity.addEventListener('submit', displayResult);
+if(activity) {
+    activity.addEventListener('submit', displayResult);
+}
 
 
 const quickAdvice = document.getElementById('quick-advice')
@@ -266,4 +268,48 @@ const params = new URLSearchParams(window.location.search);
 
 if (params.get('quickAdvice') === 'true') {
     displayResult(new Event('quickAdvice'));
+}
+
+
+// Anecdotes
+
+
+const anecdoteForm = document.getElementById("anecdote-form");
+if (anecdoteForm) {
+anecdoteForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get the user's input
+    const usernameInput = document.getElementById("username").value.trim();
+    const messageInput = document.getElementById("message").value.trim();
+
+    // Use Anonymous if no name was provided
+    const username = usernameInput || "Anonymous";
+
+    // Prevent empty submissions
+    if (!messageInput) {
+        alert("Please enter an anecdote before submitting.");
+        return;
+    }
+
+    // Create the anecdote object
+    const anecdote = {
+        username: username,
+        message: messageInput,
+        date: new Date().toLocaleDateString()
+    };
+
+    // Retrieve existing anecdotes
+    const anecdotes =
+        JSON.parse(localStorage.getItem("anecdotes")) || [];
+
+    // Add the new anecdote
+    anecdotes.push(anecdote);
+
+    // Save anecdotes to local storage
+    localStorage.setItem("anecdotes", JSON.stringify(anecdotes));
+
+    // Redirect to the anecdotes page
+    window.location.href = "Crescove-Anecdotes.html";
+});
 }
