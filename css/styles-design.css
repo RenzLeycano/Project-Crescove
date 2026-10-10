@@ -348,12 +348,12 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     transition: box-shadow 0.1s ease-in-out 0ms;
 }
 
-.explore-background:hover {
+#activity:has(.activity-buttons:hover), #about-shortcut:hover, #topic-shortcut:hover, #spec-topics-shortcuts .explore-background:hover {
     box-shadow: 0 0 20px 2px var(--accent-color);
     transition: transform 0.05s ease-in-out 0ms;
 }
 
-.explore-background:active {
+#activity:has(.activity-buttons:active), #about-shortcut:active, #topic-shortcut:active, #spec-topics-shortcuts .explore-background:active {
     transform: scale(1.05);
     box-shadow: 0 0 20px 2px var(--main-color4);
 }
@@ -657,7 +657,8 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 
 #mood-activity > fieldset {
     border: none;
-    margin-top: 2em;
+    margin: 2em 0 3em;
+    width: 100%;
 }
 
 .question{
@@ -673,7 +674,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 80px;
     border-radius: 30px;
     padding: 0 3.5%;
     background: linear-gradient(90deg,
@@ -693,7 +693,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #mood::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 6px;
     height: 100px;
     background-color: var(--neutral2);
     border-radius: 3px;
@@ -703,9 +702,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2em;
     margin-top: 1em;
-    padding: 0 1.25em;
 }
 
 #mood-range div {
@@ -713,10 +710,6 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 2em;
-}
-.emoji {
-    width: 3.5em;
 }
 
 /* Activity 2 - Intensity */
@@ -969,16 +962,18 @@ input[type="radio"][id="10"]:checked {
 }
 
 /* Result Info */
-.result-info {
+#advice-prompt {
     position: absolute;
-    right: 25%;
-    left: 25%;
     text-align: center;
-    max-width: 50%;
+    top: 10%;
+    max-width: 75%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
-#advice-prompt {
-    top: 10%;
+.result-info .button1 {
+    margin: 6em;
 }
 
 #home-button {
@@ -1546,7 +1541,7 @@ VIEWPORTS
     }
 
     .desktop {
-        display: none;
+        display: none !important;
     }
 
     hr {
@@ -1561,7 +1556,7 @@ VIEWPORTS
     }
 
     /* Typography */
-    p, a {
+    p, a , label{
         font-size: 0.9em;
     }
     
@@ -2011,6 +2006,88 @@ VIEWPORTS
     #add-anecdote form {
         padding: 2em 0;
     }
+
+    /* ========================================= */
+    /* Activity Page */
+    #background-design {
+        height: 27vh;
+    }
+
+    #mood-activity {
+        padding: 6.5vh 5% 2em;
+        
+    }
+    
+    #mood {
+        height: 40px;
+    }
+
+    #mood-range {
+        gap: 1em;
+        padding: 0 .25em;
+    }
+
+    #mood-range div {
+        width: 1em;
+    }
+
+    #mood-range p {
+        font-size: 0.5em;
+    }
+    .emoji {
+        width: 2em;
+    }
+
+    #mood::-webkit-slider-thumb {
+        height: 60px;
+        width: 3px;    
+    }
+
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--neutral2);
+        border-radius: 15px;
+    }
+
+    #intensity-radio div:first-of-type::after, #intensity-radio div:last-of-type::after {
+        font-size: 0.6em;
+    }
+
+    #advice-prompt {
+        min-width: 75%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    /* Envelope */
+    .envelope-background, .envelope {
+        transform: translate(-50%, 0) scale(0.5);
+        bottom: -15%;
+        left: 50%;
+        right: 50%;
+    }
+
+    #advice {
+        transform: translate(-50%, -50%) scale(0.5);
+        left: 50%;
+        right: 50%;
+        bottom: -40%;
+    }
+
+    @keyframes unveil {
+        60% {
+            bottom: 0%;
+        }
+        100% {
+            bottom: -10%;
+            transform: translate(-50%, -50%) scale(0.6);
+            left: 50%;
+            right: 50%;
+            z-index: 10;
+        }
+    }
 }
 
 /* MEDIA QUERY FOR TABLET VIEWPORT */
@@ -2050,7 +2127,7 @@ VIEWPORTS
     }
 
     /* Typography */
-    p, a {
+    p, a, label {
         font-size: 1em;
     }
 
@@ -2364,6 +2441,56 @@ VIEWPORTS
         padding: 6.5vh 5% 2em;
     }
 
+    #mood {
+        height: 80px;
+    }
+
+    #mood-range {
+        gap: 2em;
+        padding: 0 1.25em;
+    }
+
+    #mood-range div {
+        width: 2em;
+    }
+
+    #mood-range p {
+        font-size: 1em;
+    }
+    .emoji {
+        width: 3.5em;
+    }
+
+    #mood::-webkit-slider-thumb {
+        height: 100px;
+        width: 6px;
+    }
+
+    input[type="radio"] {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--neutral2);
+        border-radius: 15px;
+    }
+
+    #intensity-radio div:first-of-type::after, #intensity-radio div:last-of-type::after {
+        font-size: 1em;
+    }
+
+    .envelope-background, .envelope {
+        transform: translate(-50%, 0) scale(1);
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+    }
+
+    #advice {
+        transform: translate(-50%, -50%) scale(1);
+        left: 50%;
+        right: 50%;
+        bottom: -20%;
+    }
+
     /* Envelope Animation */
 
     @keyframes unveil {
@@ -2372,6 +2499,10 @@ VIEWPORTS
         }
         100% {
             bottom: 15%;
+            transform: translate(-50%, -50%) scale(1.1);
+            left: 50%;
+            right: 50%;
+            z-index: 10;
         }
     }
     /* ========================================= */
