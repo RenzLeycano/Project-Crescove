@@ -14,6 +14,9 @@
     --bg-accent2: #638FB9AA;
     --bg-accent3: #FFFFFFAA;
     --bg-color: #FFF;
+    --scrollbar-track: #282827;
+    --scrollbar-thumb: var(--accent-color);
+    --scrollbar-hover: var(--accent-color);
 
     /* Mood colors */
     --angry: #630000;

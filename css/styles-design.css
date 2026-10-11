@@ -18,9 +18,15 @@ header {
     z-index: 100;
 }
 
-#page-theme {
-    width: 30px;
-    height: 30px;
+header > #page-theme, #activity > #page-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5px;
+    border-radius: 15px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--main-color4);
 }
 
 footer {
@@ -385,7 +391,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 }
 
 .back-button > p, .back-button > img {
-    color: var(--neutral3);
+    color: var(--neutral2);
     height: 20px;
     font-size: 0.9em;
 }
@@ -1466,7 +1472,7 @@ input[type="radio"][id="10"]:checked {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--neutral3);
+    color: var(--neutral4);
 }
 .tips > p {
     text-align: center;
@@ -2012,12 +2018,12 @@ VIEWPORTS
     }
 
     #topic-info {
-        padding: 3em 0 0;
+        padding: 3em 0;
     }
 
     .big-header {
         font-weight: 900;
-        color: var(--main-color4);
+        color: var(--neutral2);
         font-size: 2.5em;
     }
 
@@ -2066,6 +2072,14 @@ VIEWPORTS
 
     /* ========================================= */
     /* Activity Page */
+
+    #activity > #page-theme{
+        position: absolute;
+        display: flex;
+        right: 0;
+        margin: 2em;
+    }
+
     #background-design {
         height: 27vh;
     }
