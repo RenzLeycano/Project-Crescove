@@ -36,8 +36,6 @@ html {
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-/* Scrollbar colors */
-
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
     width: 10px;
