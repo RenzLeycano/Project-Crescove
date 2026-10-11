@@ -29,6 +29,15 @@ header > #page-theme, #activity > #page-theme {
     background-color: var(--main-color4);
 }
 
+#page-theme img {
+    width: 20px;
+    height: 20px;
+}
+
+.spin-animation {
+    animation: spin-in 0.1s;
+}
+
 footer {
     z-index: 99;
 }
@@ -673,7 +682,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     transition: opacity 0.5s;
 }
 #activity > a > .back-button {
-    top: 3em;
+    top: 1.9em;
 }
 #background-design {
     background-color: var(--bg-accent);
@@ -841,7 +850,7 @@ input[type="radio"][id="10"]:checked {
     overflow-y: hidden;
     justify-content: center;
     align-items: end;
-    background-color: var(--neutral1);
+    background-color: var(--bg-color);
     z-index: 100;
 }
 
@@ -968,7 +977,7 @@ input[type="radio"][id="10"]:checked {
 
 #mood-color {
     background-color: var(--neutral1);
-    border: 2px solid var(--neutral2);
+    border: 2px solid black;
     border-radius: 40px;
     width: 50px;
     height: 50px;
@@ -984,6 +993,11 @@ input[type="radio"][id="10"]:checked {
     height: 50px;
     width: 80%;
 }
+
+#quick-advice-header , #mood-detail, #advice-details {
+    color: black;
+}
+
 /* Quick Advice */
 #quick-advice-header {
     display: none;
@@ -1700,6 +1714,7 @@ VIEWPORTS
     #close {
         width: 25px;
         height: 25px;
+        margin: 2.5px;
         padding-right: 5px;
         animation: spin-in 0.1s;
     }
@@ -2074,10 +2089,10 @@ VIEWPORTS
     /* Activity Page */
 
     #activity > #page-theme{
-        position: absolute;
+        position: fixed;
         display: flex;
         right: 0;
-        margin: 2em;
+        margin: 1em;
     }
 
     #background-design {
@@ -2509,6 +2524,10 @@ VIEWPORTS
 
     /* ========================================= */
     /* Activity Page */
+    #activity > #page-theme{
+        margin: 2em;
+    }
+    
     #background-design {
         height: 20vh;
     }

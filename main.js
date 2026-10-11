@@ -26,22 +26,23 @@ const themeToggle = document.getElementById("page-theme");
 const themeIcon = document.getElementById("theme-icon");
 const root = document.documentElement;
 
-// Image paths
 const sunImage = "Icons/Light Mode.svg";
 const moonImage = "Icons/Dark Mode.svg";
 
 let currentTheme = localStorage.getItem("theme") || "light";
 
-// Apply theme and corresponding icon
+// Apply theme and icon
 function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
 
     if (theme === "dark") {
         themeIcon.src = moonImage;
         themeIcon.alt = "Switch to light mode";
+        themeIcon.classList.add("spin-animation");
     } else {
         themeIcon.src = sunImage;
         themeIcon.alt = "Switch to dark mode";
+        themeIcon.classList.remove("spin-animation");
     }
 
     localStorage.setItem("theme", theme);
@@ -54,8 +55,17 @@ applyTheme(currentTheme);
 themeToggle.addEventListener("click", () => {
     currentTheme =
         root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-
     applyTheme(currentTheme);
+
+    themeIcon.classList.remove("spin-animation");
+
+    void themeIcon.offsetWidth;
+
+    themeIcon.classList.add("spin-animation");
+});
+
+themeIcon.addEventListener("animationend", () => {
+    themeIcon.classList.remove("spin");
 });
 
 

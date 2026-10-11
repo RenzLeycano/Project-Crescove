@@ -52,3 +52,7 @@
 :root[data-theme="dark"] img {
     filter: contrast(0.9) saturate(1.20) brightness(0.9) !important;
 }
+
+:root[data-theme="dark"] .back-button > img {
+    filter: brightness(0) invert(1) !important;
+}
