@@ -6,6 +6,10 @@ main {
     min-width: 100vw;
 }
 
+#index {
+    background-color: #1c1c1c;
+}
+
 body {
     overflow-x: hidden;
     display: flex;
