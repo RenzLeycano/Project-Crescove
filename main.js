@@ -20,6 +20,45 @@ window.addEventListener('DOMContentLoaded', () => {
     video.load();
 });
 
+// Light and Dark Mode
+
+const themeToggle = document.getElementById("page-theme");
+const themeIcon = document.getElementById("theme-icon");
+const root = document.documentElement;
+
+// Image paths
+const sunImage = "Icons/Light Mode.svg";
+const moonImage = "Icons/Dark Mode.svg";
+
+let currentTheme = localStorage.getItem("theme") || "light";
+
+// Apply theme and corresponding icon
+function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+
+    if (theme === "dark") {
+        themeIcon.src = moonImage;
+        themeIcon.alt = "Switch to light mode";
+    } else {
+        themeIcon.src = sunImage;
+        themeIcon.alt = "Switch to dark mode";
+    }
+
+    localStorage.setItem("theme", theme);
+}
+
+// Set initial theme
+applyTheme(currentTheme);
+
+// Toggle on image click
+themeToggle.addEventListener("click", () => {
+    currentTheme =
+        root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+    applyTheme(currentTheme);
+});
+
+
 // Hero Image Slideshow
 
 let slideIndex = 0;

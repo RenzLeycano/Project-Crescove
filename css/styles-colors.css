@@ -1,4 +1,5 @@
 :root {
+    color-scheme: light;
     --accent-color: #FAFF94;
     --main-color1: #60E6F6;
     --main-color2: #638FB9;
@@ -12,6 +13,7 @@
     --bg-accent: #76AFEE26;
     --bg-accent2: #638FB9AA;
     --bg-accent3: #FFFFFFAA;
+    --bg-color: #FFF;
 
     /* Mood colors */
     --angry: #630000;
@@ -24,4 +26,26 @@
     --sad: #0053DD;
     --guilty: #eb56ee;
     --bored: #484848;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --accent-color: #f7ff60;
+    --main-color1: #3B93AF;
+    --main-color2: #2C466C;
+    --main-color3: #4870A9;
+    --main-color4: #051132;
+    --neutral1: #fff;
+    --neutral2: #fff;
+    --neutral3: #3c3c3c;
+    --neutral4: #e5e5e5;
+    --shadow: #00000040;
+    --bg-accent: #33475e26;
+    --bg-accent2: #638FB9AA;
+    --bg-accent3: #FFFFFFAA;
+    --bg-color: #1c1c1c;
+}
+
+:root[data-theme="dark"] img {
+    filter: contrast(0.9) saturate(1.20) brightness(0.9) !important;
 }
