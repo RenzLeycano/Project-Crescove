@@ -1049,7 +1049,7 @@ input[type="radio"][id="10"]:checked {
 
 #advice-details {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 1.5em;
+    font-size: clamp(16px, 3cqw, 20px);
     text-align: center;
     font-style: italic;
     font-weight: 500;
@@ -1060,6 +1060,46 @@ input[type="radio"][id="10"]:checked {
     font-weight: 600;
     font-size: 1.25em;
     font-style: italic;
+}
+
+#result-display .decor-circle.c1 {
+    width: 250px;
+    height: 250px;
+    bottom: 30%;
+    left: 10%;
+    opacity: 0.7;
+    z-index: -2;
+    animation: 4s linear infinite pulse;
+}
+
+#result-display .decor-circle.c2 {
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    right: 17%;
+    opacity: 0.5;
+    z-index: -2;
+    animation: 10s linear infinite pulse;
+}
+
+#result-display .decor-circle.c3 {
+    width: 370px;
+    height: 370px;
+    bottom: 40%;
+    right: 5%;
+    opacity: 0.2;
+    z-index: -2;
+    animation: 7s linear infinite pulse;
+}
+
+#result-display .decor-circle.c4 {
+    width: 100px;
+    height: 100px;
+    bottom: 75%;
+    left: 34%;
+    opacity: 0.3;
+    z-index: -2;
+    animation: 5s linear infinite pulse;
 }
 
 @keyframes unveil {
