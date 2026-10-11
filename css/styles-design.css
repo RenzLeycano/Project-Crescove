@@ -3,6 +3,7 @@
 main {
     min-height: 100vh;
     position: relative;
+    min-width: 100vw;
 }
 
 body {
@@ -15,6 +16,11 @@ body {
 
 header {
     z-index: 100;
+}
+
+#page-theme {
+    width: 30px;
+    height: 30px;
 }
 
 footer {
@@ -94,9 +100,9 @@ header {
     position: sticky;
     width: 100vw;
     background-color: var(--main-color4);
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     top: 0;
 }
 
@@ -1634,6 +1640,7 @@ VIEWPORTS
     header {
         position: sticky;
         padding: 0 1em 0 1.5em;
+        grid-template-columns: 15fr 0 3fr 1.5fr;
         height: 60px;
     }
 
@@ -1671,6 +1678,11 @@ VIEWPORTS
 
     #nav-highlight::before, #nav-highlight::after {
         display: none;
+    }
+
+    #page-theme {
+        width: 30px;
+        height: 30px;
     }
 
     #hamburger {
@@ -2198,6 +2210,7 @@ VIEWPORTS
     header {
         height: 80px;
         padding-left: 3em;
+        grid-template-columns: 15fr 2fr 1fr;
     }
 
     header a img {
@@ -2214,6 +2227,7 @@ VIEWPORTS
         left: unset;
         height: unset;
         opacity: 1;
+        padding: 0 1em 0 2em;
     }
 
     #nav-bar li {
