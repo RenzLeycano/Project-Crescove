@@ -1539,6 +1539,7 @@ input[type="radio"][id="10"]:checked {
 .tip-background {
     display: flex;
     background-color: var(--accent-color);
+    height: 100%;
     align-items: center;
     justify-content: center;
     border-radius: 30px;
@@ -2661,6 +2662,8 @@ VIEWPORTS
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2em;
+        place-items: start;
+        padding-top: 2em;
     }
 
     .tips {
