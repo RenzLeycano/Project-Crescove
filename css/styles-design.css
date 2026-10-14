@@ -215,15 +215,19 @@ footer {
     grid-template-columns: 20px auto;
     text-align: left;
 }
-.list li a {
+.crescove-list li a {
     transition: color 0.1 ease-in-out 0ms;
 }
 
-.list li a:visited{
+.crescove-list li {
+    margin: 0.25em 0;
+}
+
+.crescove-list li a:visited{
     color: inherit;
 }
 
-.list li a:hover {
+.crescove-list li a:hover {
     color: var(--accent-color);
     transition: transform 0.1 ease-in-out 0ms;
 }
