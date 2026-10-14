@@ -215,19 +215,20 @@ footer {
     grid-template-columns: 20px auto;
     text-align: left;
 }
-.crescove-list li a {
-    transition: color 0.1 ease-in-out 0ms;
-}
 
 .crescove-list li {
     margin: 0.25em 0;
 }
 
-.crescove-list li a:visited{
+.list li a {
+    transition: color 0.1 ease-in-out 0ms;
+}
+
+.list li a:visited{
     color: inherit;
 }
 
-.crescove-list li a:hover {
+.list li a:hover{
     color: var(--accent-color);
     transition: transform 0.1 ease-in-out 0ms;
 }
@@ -663,6 +664,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     border-radius: 30px;
     color: white;
     font-weight: bold;
+    z-index: 21;
 }
 
 /* About Shortcut */
