@@ -1508,13 +1508,6 @@ input[type="radio"][id="10"]:checked {
 }
 /* Topic info styles */
 
-#topic-info article, #topic-info #add-anecdote{
-    padding: 0 5em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
 #topic-details > h2, #topic-details > h3{
     margin: 0.5em 0 1em;
 }
@@ -2659,6 +2652,10 @@ VIEWPORTS
         display: grid;
         width: max-content;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #topic-info article, #topic-info > #add-anecdote{
+        padding: 0 5em;
     }
 
     #anecdote-links .button2 {
