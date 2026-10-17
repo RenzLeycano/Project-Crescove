@@ -390,12 +390,12 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     transition: box-shadow 0.1s ease-in-out 0ms;
 }
 
-#activity:has(.activity-buttons:hover), #about-shortcut:hover, #topic-shortcut:hover, #spec-topics-shortcuts .explore-background:hover {
+#activity:has(.activity-buttons:hover), #about-shortcut:hover, #topic-shortcut:hover, #emotional-health:hover, #spec-topics-shortcuts .explore-background:hover {
     box-shadow: 0 0 20px 2px var(--accent-color);
     transition: transform 0.05s ease-in-out 0ms;
 }
 
-#activity:has(.activity-buttons:active), #about-shortcut:active, #topic-shortcut:active, #spec-topics-shortcuts .explore-background:active {
+#activity:has(.activity-buttons:active), #about-shortcut:active, #topic-shortcut:active, #emotional-health:active, #spec-topics-shortcuts .explore-background:active {
     transform: scale(1.05);
     box-shadow: 0 0 20px 2px var(--main-color4);
 }
