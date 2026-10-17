@@ -1257,7 +1257,7 @@ input[type="radio"][id="10"]:checked {
 
 .hero-image.topic .hero-info {
     position: absolute;
-    color: var(--main-color2);
+    color: var(--neutral2);
     font-style: italic;
     font-weight: bold;
     text-align: center;
@@ -2323,7 +2323,7 @@ VIEWPORTS
     /* Footer */
     footer {
         padding: 3em 8em;
-        height: 403px;
+        height: 480px;
     }
 
     #footer-details {
@@ -2339,10 +2339,10 @@ VIEWPORTS
     #footer-site, #footer-resources, #footer-get-to-know {
         align-items: start;
     }
-
+/* 
     #footer-get-to-know {
         grid-column: 2;
-    }
+    } */
 
     #footer-resources .list-sideline{
         display: block;
