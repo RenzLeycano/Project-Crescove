@@ -221,8 +221,8 @@ function displayResult(event) {
             break;
         case 4:        //Confident
             const confident = [
-                "You're lowkey goated.",
-                "How to be you po? Just kidding, enjoy the moment!",
+                "Keep yourself grounded in the present!",
+                "Always enjoy the moment!",
                 "You're the light in the sea of darkness. Continue to thrive and inspire others.",
                 "Stay Humble! Cherish the support you get.",
                 "Stay humble, keep inspiring others, and use that strong momentum to help those around you grow.",

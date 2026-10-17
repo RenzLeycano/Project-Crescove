@@ -102,6 +102,7 @@ hr {
 .highlight {
     display: inline;
     font-weight: bold;
+    color: black;
     background-color: var(--accent-color);
 }
 
@@ -655,12 +656,9 @@ input:focus, textarea:focus, .button1:active, .button2:active {
 #topic-shortcut > .crescove-list {
     position: relative;
     height: min-content;
-    width: calc-size(min-content, size + 2em);
     left: 10%;
     bottom: -10%;
-    z-index: 5;
     background-color: var(--bg-accent2);
-    padding: 1.5em;
     border-radius: 30px;
     color: white;
     font-weight: bold;
@@ -1668,7 +1666,7 @@ VIEWPORTS
 
     /* Typography */
     p, a , label{
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
     
     .title {
@@ -1706,7 +1704,7 @@ VIEWPORTS
     header {
         position: sticky;
         padding: 0 1em 0 1.5em;
-        grid-template-columns: 15fr 0 3fr 1.5fr;
+        grid-template-columns: 15fr 0 3fr 1fr;
         height: 60px;
     }
 
@@ -1939,6 +1937,11 @@ VIEWPORTS
     #topic-shortcut > .decor-image {
         height: 100%;
         left: -75%;
+    }
+
+    #topic-shortcut > .crescove-list {
+        width: calc-size(min-content, size + 0.5em);
+        padding: 1em;
     }
 
     /* About */
@@ -2285,7 +2288,7 @@ VIEWPORTS
     header {
         height: 80px;
         padding-left: 3em;
-        grid-template-columns: 15fr 2fr 1fr;
+        grid-template-columns: 12fr 2fr 1fr;
     }
 
     header a img {
@@ -2308,7 +2311,7 @@ VIEWPORTS
     #nav-bar li {
         display: inline-flex;
         font-size: 1em;
-        padding: 0 1.5em;
+        padding: 0 1em;
     }
 
     #nav-highlight::before, #nav-highlight::after {
@@ -2457,6 +2460,11 @@ VIEWPORTS
         left: -30%;
     }
 
+    #topic-shortcut > .crescove-list {
+        width: calc-size(min-content, size + 2em);
+        padding: 1.5em;
+    }
+
     /* About Shortcut*/
     #about-shortcut > .decor-image {
         height: 120%;
@@ -2580,42 +2588,6 @@ VIEWPORTS
 
     #mood-activity {
         padding: 6.5vh 5% 2em;
-    }
-
-    #mood {
-        height: 80px;
-    }
-
-    #mood-range {
-        gap: 2em;
-        padding: 0 1.25em;
-    }
-
-    #mood-range div {
-        width: 2em;
-    }
-
-    #mood-range p {
-        font-size: 1em;
-    }
-    .emoji {
-        width: 3.5em;
-    }
-
-    #mood::-webkit-slider-thumb {
-        height: 100px;
-        width: 6px;
-    }
-
-    input[type="radio"] {
-        width: 30px;
-        height: 30px;
-        border: 2px solid var(--neutral2);
-        border-radius: 15px;
-    }
-
-    #intensity-radio div:first-of-type::after, #intensity-radio div:last-of-type::after {
-        font-size: 1em;
     }
 
     .envelope-background, .envelope {
@@ -2864,6 +2836,42 @@ VIEWPORTS
         padding: 12.6vh 20% 2em;
     }
 
+    #mood {
+        height: 80px;
+    }
+
+    #mood-range {
+        gap: 2em;
+        padding: 0 1.25em;
+    }
+
+    #mood-range div {
+        width: 2em;
+    }
+
+    #mood-range p {
+        font-size: 1em;
+    }
+    .emoji {
+        width: 3.5em;
+    }
+
+    #mood::-webkit-slider-thumb {
+        height: 100px;
+        width: 6px;
+    }
+
+    input[type="radio"] {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--neutral2);
+        border-radius: 15px;
+    }
+
+    #intensity-radio div:first-of-type::after, #intensity-radio div:last-of-type::after {
+        font-size: 1em;
+    }
+    
     /* Envelope Animation */
 
     @keyframes unveil {
