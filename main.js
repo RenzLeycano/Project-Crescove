@@ -235,7 +235,7 @@ function displayResult(event) {
             break;
         case 5:        //Calm
             const calm = [
-                "You're lowkey goated.",
+                "Calmness nurtures wisdom.",
                 "Stay right there in that peaceful state.",
                 "Keep protecting your quiet energy from the noise around you.",
                 "Keep calm and eat.",

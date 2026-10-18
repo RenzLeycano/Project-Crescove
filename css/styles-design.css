@@ -229,8 +229,9 @@ footer {
     color: inherit;
 }
 
-.list li a:hover{
+.list li a:hover, #footer-resources .crescove-list a:hover{
     color: var(--accent-color);
+    text-decoration: underline;
     transition: transform 0.1 ease-in-out 0ms;
 }
 
@@ -365,7 +366,7 @@ input:focus, textarea:focus, .button1:active, .button2:active {
     display: flex;
     /* box-shadow: 0 4px 10px var(--shadow); */
 }
-.hero-image img{
+.hero-image img, .hero-image a{
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1839,7 +1840,7 @@ VIEWPORTS
 
     /* Back button */
     .back-button {
-        top: 10%;
+        top: 7%;
         transform: scale(0.8);
     }
 
@@ -2249,7 +2250,7 @@ VIEWPORTS
     }
 
     .big-header {
-        font-size: 5.5em;
+        font-size: 4em;
     }
 
     .disclaimer {
@@ -2258,6 +2259,7 @@ VIEWPORTS
 
     /* Back button */
     .back-button {
+        top: 10%;
         transform: scale(1);
     }
 
